@@ -1,0 +1,21 @@
+<div id="page-content">
+  <div class="container">
+    <div class="card text-center mt-4" , id="show">
+      <div class="card-header" , id="show-header">
+        <%= @article.title %>
+      </div>
+      <div class="card-body">
+        <div class="row col-10 offset-1">
+          <p class="card-text text-left" , id="show-text"><%= @article.description %></p>
+        </div>
+        <%= link_to  "Edit", edit_article_path(@article), class: "btn btn-outline-light btn-sm" %>
+        <%= link_to  "Delete", article_path(@article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
+      </div>
+      <div class="card-footer text-muted">
+        Updated <%= time_ago_in_words @article.updated_at %> ago.<br>
+        Created <%= time_ago_in_words @article.created_at %> ago.
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+<%= render partial: "/shared/errors" %>
+
+<%= form_with(model: @article, local: true) do |f| %>
+
+<div class="form-group row">
+  <%= f.label 'Today\'s Coffee Time Theme', class: "col-2 col-form-label" %>
+  <div class="col-10">
+    <%= f.text_field :title, class: "form-control", placeholder: "title" %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <%= f.label "Your thoughts", class: "col-2 col-form-label" %>
+  <div class="col-10">
+    <%= f.text_area :description, class: "form-control", id: "exampleFormControlTextarea1", rows:"10", placeholder: "thoughts"  %>
+  </div>
+</div>
+
+<p class="text-center"><%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %></p>
+<% end %>

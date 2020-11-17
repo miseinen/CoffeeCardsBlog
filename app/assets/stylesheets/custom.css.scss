@@ -1,0 +1,176 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar{
+    background-color: black !important;
+   
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.nav-link:hover{
+    color: rgb(124, 37, 37) !important;
+}
+
+#logo{
+    float: left;
+    font-size: 1.7em;
+    color: white;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover{
+    color: rgb(124, 37, 37);
+    text-decoration: none;
+}
+
+.jumbotron{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 425px;
+    margin-top: 1em;
+}
+
+#main{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), image-url("main.jpg");
+}
+
+.display-4{
+    color: white !important;
+    font-weight: 600;
+}
+
+.lead{
+    color: white;
+    font-size: larger;
+}
+
+.btn-dark{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-dark:hover{
+    background-color: black;
+    color: rgb(124, 37, 37);
+}
+
+html,
+body{
+    height: 100%;
+}
+
+#page-content{
+    flex: 1 0 auto;
+    background-color: lightgrey;
+}
+
+#sticky-footer{
+    flex-shrink: none;
+}
+
+.card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card-body{
+    //background-color: #9e9189;
+    color: rgb(211, 201, 201);
+}
+
+.card-header{
+    opacity: 0.8;
+    background-color:#a38971;
+    color: white;
+}
+
+.card-footer{
+    opacity: 0.8;
+    background-color:#42352c;
+    color: rgb(165, 160, 160);
+    font-style: italic;
+}
+
+#list{
+    background-image: image-url('list');
+}
+
+#new{
+    background-image: image-url('new');
+}
+
+#edit{
+    background-image: image-url('edit');
+}
+
+#show{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ), image-url('show');
+}
+
+#title{
+    text-decoration: none;
+    color: rgb(124, 37, 37);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#title:hover{
+    color: white;
+}
+
+#form-title{
+    font-family: "Lucida Sans Unicode";
+    color: rgb(124, 37, 37);
+}
+
+.form-control{
+    opacity: 0.8;
+    background-color:#42352c;
+    color: white;
+}
+
+.form-group{
+    font-family: "Lucida Sans Unicode";
+}
+
+.alert-info{
+    opacity: 0.8;
+    background-color:#8a8a8a;
+    color: rgb(124, 37, 37);
+    border-color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.close{
+    text-shadow: none;
+}
+
+#show-header{
+    color: rgb(124, 37, 37);
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode";
+}
+
+#show-text{
+    font-family: "Lucida Sans Unicode";
+    color: rgb(211, 201, 201);
+}
+
+
+
+
