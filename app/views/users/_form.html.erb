@@ -1,0 +1,39 @@
+<div id="page-content">
+  <div class="container">
+    <div class="card text-center mt-4 mb-4", id=<%= image_id %>>
+      <div class="card-header">
+        <h1 class="text-center mt-4 font-weight-bold" , id="form-title"><%= title %></h1>
+      </div>
+      <div class="card-body">
+        <%= render "/shared/errors", error_target: @user %>
+
+        <%= form_with(model: @user, local: true) do |f| %>
+
+        <div class="form-group row">
+          <%= f.label :username, class: "col-2 col-form-label", id: "sighup_label" %>
+          <div class="col-10">
+            <%= f.text_field :username, class: "form-control", placeholder: :username %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :email, class: "col-2 col-form-label", id: "sighup_label" %>
+          <div class="col-10">
+            <%= f.email_field :email, class: "form-control", placeholder: :email %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :password, class: "col-2 col-form-label", id: "sighup_label" %>
+          <div class="col-10">
+            <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+          </div>
+        </div>
+
+        <p class="text-center"><%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+ 

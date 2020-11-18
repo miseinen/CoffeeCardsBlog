@@ -120,6 +120,10 @@ body{
         ), image-url('show');
 }
 
+#signup{
+    background-image: image-url('signup');
+}
+
 #title{
     text-decoration: none;
     color: rgb(124, 37, 37);
@@ -169,6 +173,13 @@ body{
 #show-text{
     font-family: "Lucida Sans Unicode";
     color: rgb(211, 201, 201);
+}
+
+#sighup_label{
+    background-color: #42352c;
+    opacity: 0.8;
+    color: rgb(211, 201, 201);
+    border-radius: 15px 50px
 }
 
 
