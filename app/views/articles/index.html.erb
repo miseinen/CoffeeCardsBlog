@@ -12,6 +12,7 @@
           <div class="card-body text-left">
           <div class="row col-9">
              <p class="card-text"><%= truncate(a.description, length: 250) %></p>
+             <p class="card-text text-right font-italic">by <%= a.user.username if a.user %></p>
           </div>
             <div class="text-center">
               <%= link_to  "Show", article_path(a), class: "btn btn-outline-light btn-sm" %>
