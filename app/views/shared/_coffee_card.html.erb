@@ -1,0 +1,38 @@
+<div class="container">
+  <% articles.each do |a| %>
+  <div class="row justify-content-md-center">
+    <div class="col-10 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
+
+        <div class="card-header">
+          <h5 class="card-title"><%= link_to  "#{a.title}", article_path(a), id: "title" %></h5>
+        </div>
+        <div class="card-body text-left">
+          <div class="row col-8">
+            <p class="card-text mb-3 lead"><%= a.description %></p>
+          </div>
+          <div class="card-body text-left font-italic">
+            <% if defined?(list)%>
+            by <%= link_to  a.user.username, user_path(a.user.id), id: "author-link" %>
+            <% end %>
+          </div>
+          <%
+=begin%>
+          <div class="text-left offset-3">
+            <%= link_to  "Edit", edit_article_path(a), class: "btn btn-outline-light btn-sm" %>
+            <%= link_to  "Delete", article_path(a), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
+          </div>
+          <%
+=end%>
+        </div>
+
+        <div class="card-footer">
+          Updated <%= time_ago_in_words a.updated_at %> ago.
+          Created <%= time_ago_in_words a.created_at %> ago.
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

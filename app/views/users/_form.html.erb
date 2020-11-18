@@ -10,23 +10,23 @@
         <%= form_with(model: @user, local: true) do |f| %>
 
         <div class="form-group row">
-          <%= f.label :username, class: "col-2 col-form-label", id: "sighup_label" %>
+          <%= f.label :username, class: "col-2 col-form-label", id: "signup-label" %>
           <div class="col-10">
-            <%= f.text_field :username, class: "form-control", placeholder: :username, id: "sighup_field" %>
+            <%= f.text_field :username, class: "form-control", placeholder: :username, id: "signup-field" %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :email, class: "col-2 col-form-label", id: "sighup_label" %>
+          <%= f.label :email, class: "col-2 col-form-label", id: "signup-label" %>
           <div class="col-10">
-            <%= f.email_field :email, class: "form-control", placeholder: :email, id: "sighup_field" %>
+            <%= f.email_field :email, class: "form-control", placeholder: :email, id: "signup-field" %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :password, class: "col-2 col-form-label", id: "sighup_label" %>
+          <%= f.label :password, class: "col-2 col-form-label", id: "signup-label" %>
           <div class="col-10">
-            <%= f.password_field :password, class: "form-control", placeholder: "Password", id: "sighup_field" %>
+            <%= f.password_field :password, class: "form-control", placeholder: "Password", id: "signup-field" %>
           </div>
         </div>
 

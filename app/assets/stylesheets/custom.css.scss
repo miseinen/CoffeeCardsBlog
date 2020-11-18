@@ -34,11 +34,17 @@
     margin-top: 1em;
 }
 
-#main{
+.main-image{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ), image-url("main.jpg");
+}
+
+.main-text{
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 50px 15px;
 }
 
 .display-4{
@@ -85,7 +91,6 @@ body{
 }
 
 .card-body{
-    //background-color: #9e9189;
     color: rgb(211, 201, 201);
 }
 
@@ -93,6 +98,13 @@ body{
     opacity: 0.8;
     background-color:#a38971;
     color: white;
+}
+
+.card-text{
+    opacity: 0.8;
+    background-color:#42352c;
+    color: white;
+    border-radius: 15px 50px;
 }
 
 .card-footer{
@@ -147,6 +159,7 @@ body{
 #form-title{
     font-family: "Lucida Sans Unicode";
     color: rgb(124, 37, 37);
+    font-weight: bold;
 }
 
 .form-control{
@@ -185,15 +198,21 @@ body{
     color: rgb(211, 201, 201);
 }
 
-#sighup_label{
+#signup-label{
     background-color: #42352c;
     opacity: 0.8;
     color: rgb(211, 201, 201);
     border-radius: 15px 50px
 }
 
-#sighup_field{
+#signup-field{
     border-radius: 15px 50px;
+}
+
+#author-link{
+    font-size: larger;
+    font-family: "Lucida Sans Unicode";
+    color: rgb(204, 195, 195);
 }
 
 

@@ -1,34 +1,4 @@
 <div id="page-content">
-  <h1 class="text-center mt-4">Articles</h1>
-  <div class="container">
-    <% @articles.each do |a| %>
-    <div class="row justify-content-md-center">
-      <div class="col-8 mt-4">
-        <div class="card text-center shadow mb-5 bg-white rounded", id="list">
-
-          <div class="card-header">
-            <h5 class="card-title"><%= link_to  "#{a.title}", article_path(a), id: "title" %></h5>
-          </div>
-          <div class="card-body text-left">
-          <div class="row col-9">
-             <p class="card-text"><%= truncate(a.description, length: 250) %></p>
-             <p class="card-text text-right font-italic">by <%= a.user.username if a.user %></p>
-          </div>
-            <div class="text-center">
-              <%= link_to  "Show", article_path(a), class: "btn btn-outline-light btn-sm" %>
-              <%= link_to  "Edit", edit_article_path(a), class: "btn btn-outline-light btn-sm" %>
-              <%= link_to  "Delete", article_path(a), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            Updated <%= time_ago_in_words a.updated_at %> ago.
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <% end %>
-  </div>
+  <h1 class="text-center mt-4">All CoffeeCards</h1>
+  <%= render "shared/coffee_card", articles: @articles, list: true %>
 </div>
