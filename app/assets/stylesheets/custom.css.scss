@@ -134,6 +134,10 @@ body{
     background-image: image-url('user_profile');
 }
 
+#user-card{
+    background-image: image-url('user_card');
+}
+
 #show{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -213,6 +217,18 @@ body{
     font-size: larger;
     font-family: "Lucida Sans Unicode";
     color: rgb(204, 195, 195);
+}
+
+.avatar{
+    border-radius: 15px;
+}
+
+.user-title{
+    opacity: 0.9;
+    color: rgb(124, 37, 37);
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode";
+    text-decoration: none;
 }
 
 
