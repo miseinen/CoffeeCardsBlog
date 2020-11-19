@@ -1,4 +1,14 @@
 <div id="page-content">
-  <h1 class="text-center mt-4"><%= @user.username %>'s CoffeeCards</h1>
-  <%= render  "shared/coffee_card", articles: @user.articles %>
+  <h1><% @user.username %></h1>
+  <div class="container">
+    <%= render  "user_card", a: @user, list: false %>
+  </div>
+  <% if @user.articles.count > 0 %>
+  <h1 class="text-center">CoffeeCards</h1>
+  <div class="container">
+    <% @user.articles.each do |a|%>
+    <%= render  "shared/coffee_card", a: a %>
+    <% end %>
+  </div>
+  <% end %>
 </div>

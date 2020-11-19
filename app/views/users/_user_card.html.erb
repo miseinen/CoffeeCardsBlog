@@ -1,41 +1,28 @@
-<div class="container">
-  <% user.each do |a| %>
-  <div class="row justify-content-md-center">
-    <div class="col-8 mt-4">
-      <div class="card text-center shadow mb-5 bg-white rounded" , id="user-card">
+<div class="row justify-content-md-center">
+  <div class="col-8 mt-4">
+    <div class="card text-center shadow mb-3 bg-white rounded" , id="user-card">
 
-        <div class="card-header user-title">
-          <%= link_to  "#{a.username}", user_path(a), id: "show-header" %>
-        </div>
-        <div class="card-body row">
-
-          <div class="col">
-            <%= image_tag "avatar.jpg", size: "200x200", alt: a.username, class: "avatar" %>
-            <div class="card-body text-center font-italic">
-              <p class="signup-label"><%= a.articles.count %> <%= a.articles.count==1? "CoffeeCard" : "CoffeeCards" %></p>
-            </div>
-          </div>
-
-          <div class="col main-text mr-5">
-            <p class="text-center lead font-italic">About:</p>
-            <% if a.articles.count > 0 %>
-            <p class="text-bottom"><%= link_to  "#{a.username}'s CoffeeCards", user_path(a), class: "btn btn-outline-light" %></p>
-            <% end %>
+      <div class="card-header user-title">
+        <%= link_to  "#{a.username}", user_path(a), id: "show-header" %>
+      </div>
+      <div class="card-body row">
+        <div class="col">
+          <%= image_tag "avatar.jpg", size: "200x200", alt: a.username, class: "avatar" %>
+          <div class="card-body text-center font-italic">
+            <p class="signup-label"><%= pluralize(a.articles.count, "CoffeCard") %></p>
           </div>
         </div>
 
-
-        <%
-=begin%>
-        <div class="text-left offset-3">
-          <%= link_to  "Show", user_path(a), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  "Edit", edit_user_path(a), class: "btn btn-outline-light btn-sm" %>
+        <div class="col main-text mr-5">
+          <p class="text-center lead font-italic">About:</p>
+          <% if list %>
+          <p class="text-bottom"><%= link_to  "#{a.username}'s profile", user_path(a), class: "btn btn-outline-light" %></p>
+          <% end %>
         </div>
-        <%
-=end%>
+      </div>
+      <div class="card-footer">
+        Joined <%= time_ago_in_words a.created_at %> ago.
       </div>
     </div>
   </div>
-
-  <% end %>
 </div>

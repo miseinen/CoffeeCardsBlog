@@ -1,4 +1,8 @@
 <div id="page-content">
   <h1 class="text-center mt-4">All Users</h1>
-  <%= render "user_card", user: @users %>
+  <div class="container">
+    <% @users.each do |u| %>
+    <%= render "user_card", a: u, list: true %>
+    <% end %>
+  </div>
 </div>
