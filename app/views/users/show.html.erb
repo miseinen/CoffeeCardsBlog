@@ -1,14 +1,16 @@
 <div id="page-content">
   <h1><% @user.username %></h1>
   <div class="container">
-    <%= render  "user_card", a: @user, list: false %>
+    <%= render "user_card", user: @user, list: false %>
   </div>
-  <% if @user.articles.count > 0 %>
+  <% if @articles.count > 0 %>
   <h1 class="text-center">CoffeeCards</h1>
   <div class="container">
-    <% @user.articles.each do |a|%>
-    <%= render  "shared/coffee_card", a: a %>
+    <%= render "shared/pagination", model: @articles %>
+    <% @articles.each do |a| %>
+    <%= render "shared/coffee_card", article: a %>
     <% end %>
+    <%= render "shared/pagination", model: @articles %>
   </div>
   <% end %>
 </div>

@@ -1,16 +1,15 @@
 <div class="row justify-content-md-center">
   <div class="col-10 mt-4">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
-
       <div class="card-header">
-        <h5 class="card-title"><%= link_to  "#{a.title}", article_path(a), id: "title" %></h5>
+        <%= link_to  "#{article.title}", article_path(article), class: "card-title" %>
       </div>
       <div class="card-body text-left">
         <div class="row col-8">
-          <p class="card-text mb-3 lead"><%= a.description %></p>
+          <p class="card-text mb-3 lead"><%= article.description %></p>
         </div>
         <div class="card-body text-left font-italic">
-          by <%= link_to  a.user.username, user_path(a.user.id), id: "author-link" %>
+          by <%= link_to  article.user.username, user_path(article.user.id), id: "author-link" %>
         </div>
         <%
 =begin%>
@@ -21,12 +20,10 @@
         <%
 =end%>
       </div>
-
       <div class="card-footer">
-        Updated <%= time_ago_in_words a.updated_at %> ago.
-        Created <%= time_ago_in_words a.created_at %> ago.
+        Updated <%= time_ago_in_words article.updated_at %> ago.
+        Created <%= time_ago_in_words article.created_at %> ago.
       </div>
-
     </div>
   </div>
 </div>

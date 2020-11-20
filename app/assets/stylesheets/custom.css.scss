@@ -1,237 +1,242 @@
-@import 'bootstrap/dist/css/bootstrap';
+@import "bootstrap/dist/css/bootstrap";
 
-.navbar{
-    background-color: black !important;
-   
+/* Navbar */
+.navbar {
+  background-color: black !important;
 }
 
-.nav-link{
-    color: white !important;
+.nav-link {
+  color: white !important;
 }
 
-.nav-link:hover{
-    color: rgb(124, 37, 37) !important;
+.nav-link:hover {
+  color: rgb(124, 37, 37) !important;
 }
 
-#logo{
-    float: left;
-    font-size: 1.7em;
-    color: white;
-    letter-spacing: -1px;
-    font-weight: bold;
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  letter-spacing: -1px;
+  font-weight: bold;
 }
 
-#logo:hover{
-    color: rgb(124, 37, 37);
-    text-decoration: none;
+#logo:hover {
+  color: rgb(124, 37, 37);
+  text-decoration: none;
 }
 
-.jumbotron{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 425px;
-    margin-top: 1em;
+/* Main page */
+.jumbotron {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 425px;
+  margin-top: 1em;
 }
 
-.main-image{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), image-url("main.jpg");
+.main-text {
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 50px 15px;
 }
 
-.main-text{
-    background-color: black;
-    opacity: 0.8;
-    border-radius: 50px 15px;
+.display-4 {
+  color: white !important;
+  font-weight: 600;
 }
 
-.display-4{
-    color: white !important;
-    font-weight: 600;
+.lead {
+  color: white;
+  font-size: larger;
 }
 
-.lead{
-    color: white;
-    font-size: larger;
+.main-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    image-url("main.jpg");
 }
 
-.btn-dark{
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    border-radius: 15px 50px
+/* Buttons */
+.btn-dark {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  border-radius: 15px 50px;
 }
 
-.btn-dark:hover{
-    background-color: black;
-    color: rgb(124, 37, 37);
+.btn-dark:hover {
+  background-color: black;
+  color: rgb(124, 37, 37);
 }
 
+/* General */
 html,
-body{
-    height: 100%;
+body {
+  height: 100%;
 }
 
-#page-content{
-    flex: 1 0 auto;
-    background-color: lightgrey;
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
 }
 
-#sticky-footer{
-    flex-shrink: none;
+#sticky-footer {
+  flex-shrink: none;
 }
 
-.card{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+/* Cards */
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.card-body{
-    color: rgb(211, 201, 201);
+.card-body {
+  color: rgb(211, 201, 201);
 }
 
-.card-header{
-    opacity: 0.8;
-    background-color:#a38971;
-    color: white;
+.card-header {
+  opacity: 0.8;
+  background-color: #a38971;
+  color: white;
 }
 
-.card-text{
-    opacity: 0.8;
-    background-color:#42352c;
-    color: white;
-    border-radius: 15px 50px;
+.card-title {
+  color: rgb(124, 37, 37);
+  font-size: x-large;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode";
 }
 
-.card-footer{
-    opacity: 0.8;
-    background-color:#42352c;
-    color: rgb(165, 160, 160);
-    font-style: italic;
+.card-title:hover {
+  color: rgb(124, 37, 37);
 }
 
-#list{
-    background-image: image-url('list');
+.card-text {
+  opacity: 0.8;
+  background-color: #42352c;
+  color: white;
+  border-radius: 15px 50px;
 }
 
-#new{
-    background-image: image-url('new');
+.card-footer {
+  opacity: 0.8;
+  background-color: #42352c;
+  color: rgb(165, 160, 160);
+  font-style: italic;
 }
 
-#edit{
-    background-image: image-url('edit');
+#show-text {
+  font-family: "Lucida Sans Unicode";
+  color: rgb(211, 201, 201);
 }
 
-#edit_user{
-    background-image: image-url('edit_user');
+#author-link {
+  font-size: larger;
+  font-family: "Lucida Sans Unicode";
+  color: rgb(204, 195, 195);
+  text-decoration: underline;
 }
 
-#user-profile{
-    background-image: image-url('user_profile');
+.avatar {
+  border-radius: 15px;
 }
 
-#user-card{
-    background-image: image-url('user_card');
+/* Card's background images */
+#list {
+  background-image: image-url("list");
 }
 
-#show{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-        ), image-url('show');
+#new {
+  background-image: image-url("new");
 }
 
-#signup{
-    background-image: image-url('signup');
+#edit {
+  background-image: image-url("edit");
 }
 
-#title{
-    text-decoration: none;
-    color: rgb(124, 37, 37);
-    font-size: x-large;
-    font-weight: bold;
+#edit_user {
+  background-image: image-url("edit_user");
 }
 
-#title:hover{
-    color: white;
+#user-profile {
+  background-image: image-url("user_profile");
 }
 
-#form-title{
-    font-family: "Lucida Sans Unicode";
-    color: rgb(124, 37, 37);
-    font-weight: bold;
+#user-card {
+  background-image: image-url("user_card");
 }
 
-.form-control{
-    opacity: 0.8;
-    background-color:#42352c;
-    color: white;
+#show {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    image-url("show");
 }
 
-.form-group{
-    font-family: "Lucida Sans Unicode";
+#signup {
+  background-image: image-url("signup");
 }
 
-.alert-info{
-    opacity: 0.8;
-    background-color:#8a8a8a;
-    color: rgb(124, 37, 37);
-    border-color: black;
-    font-size: larger;
-    font-family: "Lucida Sans Unicode";
-    font-weight: 700;
+/* Form */
+#form-title {
+  font-family: "Lucida Sans Unicode";
+  color: rgb(124, 37, 37);
+  font-weight: bold;
 }
 
-.close{
-    text-shadow: none;
+.form-control {
+  opacity: 0.8;
+  background-color: #42352c;
+  color: white;
 }
 
-#show-header{
-    color: rgb(124, 37, 37);
-    font-size: x-large;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode";
+.form-group {
+  font-family: "Lucida Sans Unicode";
 }
 
-#show-text{
-    font-family: "Lucida Sans Unicode";
-    color: rgb(211, 201, 201);
+.signup-label {
+  background-color: #42352c;
+  opacity: 0.8;
+  color: rgb(211, 201, 201);
+  border-radius: 15px 50px;
 }
 
-.signup-label{
-    background-color: #42352c;
-    opacity: 0.8;
-    color: rgb(211, 201, 201);
-    border-radius: 15px 50px
+.signup-field {
+  border-radius: 15px 50px;
 }
 
-.signup-field{
-    border-radius: 15px 50px;
+/* Alert */
+.alert-info {
+  opacity: 0.8;
+  background-color: #8a8a8a;
+  color: rgb(124, 37, 37);
+  border-color: black;
+  font-size: larger;
+  font-family: "Lucida Sans Unicode";
+  font-weight: 700;
 }
 
-#author-link{
-    font-size: larger;
-    font-family: "Lucida Sans Unicode";
-    color: rgb(204, 195, 195);
-    text-decoration: underline;
+.close {
+  text-shadow: none;
 }
 
-.avatar{
-    border-radius: 15px;
+/* Pagination */
+.pagination .active a {
+  background-color: #42352c !important;
+  border-color: #42352c !important;
 }
 
-.user-title{
-    opacity: 0.9;
-    color: rgb(124, 37, 37);
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode";
-    text-decoration: none;
+.pagination .disabled a {
+  background-color: #bebebe !important;
+  border-color: #bebebe !important;
+  opacity: 50%;
 }
 
+.page-link {
+  background-color: #a38971;
+  color: white;
+}
 
-
-
+.page-link:hover {
+  color: black;
+}

@@ -1,8 +1,10 @@
 <div id="page-content">
   <h1 class="text-center mt-4">All Users</h1>
   <div class="container">
+    <%= render "shared/pagination", model: @users %>
     <% @users.each do |u| %>
-    <%= render "user_card", a: u, list: true %>
+    <%= render "user_card", user: u, list: true %>
     <% end %>
+    <%= render "shared/pagination", model: @users %>
   </div>
 </div>
