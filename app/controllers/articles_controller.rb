@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
     if @article.save
       flash[:notice] = "Article was created successfully."
-      redirect_to @user
+      redirect_to current_user
     else
       render "new"
     end

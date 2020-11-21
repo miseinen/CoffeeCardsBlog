@@ -12,7 +12,9 @@
             <div class="signup-label"><%= pluralize(user.articles.count, "CoffeCard") %></div>
           </div>
           <% if logged_in? && user == current_user %>
-          <%= link_to  "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to "Delete account", user_path(current_user), method: :delete, data: { confirm: "Are you sure?" },
+          class: "btn btn-outline-light btn-sm" %>
           <% end %>
         </div>
 
@@ -23,7 +25,7 @@
             <p class="text-center lead pb-3 pr-1 pl-1"><%= user.about %></p>
             <% if list %>
             <p class="text-bottom pb-3">
-              <%= link_to  "#{user.username}'s profile", user_path(user), class: "btn btn-outline-light" %></p>
+              <%= link_to "#{user.username}'s profile", user_path(user), class: "btn btn-outline-light" %></p>
             <% end %>
           </div>
         </div>
