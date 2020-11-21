@@ -12,14 +12,16 @@
         <div class="form-group row">
           <%= f.label 'Today\'s Coffee Time Theme', class: "col-2 col-form-label" %>
           <div class="col-10">
-            <%= f.text_field :title, class: "form-control", placeholder: "title" %>
+            <%= f.text_field :title, class: "form-control", placeholder: "Title",
+             maxlength: get_maxlength(Article, :title) %>
           </div>
         </div>
 
         <div class="form-group row">
           <%= f.label "Your thoughts", class: "col-2 col-form-label" %>
           <div class="col-10">
-            <%= f.text_area :description, class: "form-control", id: "exampleFormControlTextarea1", rows:"6", placeholder: "thoughts"  %>
+            <%= f.text_area :description, class: "form-control", id: "exampleFormControlTextarea1", rows:"7",
+             placeholder: "Your today's thoughts or dreams", maxlength: get_maxlength(Article, :description)  %>
           </div>
         </div>
         <p class="text-center"><%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %></p>
