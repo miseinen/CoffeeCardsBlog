@@ -11,7 +11,7 @@
           <div class="card-body text-center font-italic">
             <div class="signup-label"><%= pluralize(user.articles.count, "CoffeCard") %></div>
           </div>
-          <% if session[:user_id] != nil && user.id == session[:user_id] %>
+          <% if logged_in? && user == current_user %>
           <%= link_to  "Edit profile", edit_user_path(session[:user_id]), class: "btn btn-outline-light btn-sm" %>
           <% end %>
         </div>

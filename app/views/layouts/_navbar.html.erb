@@ -15,19 +15,22 @@
           <%= link_to "All Users", users_path, class: "nav-link" %>
         </li>
 
-        <% if session[:user_id] == nil %>
-        <li class="nav-item active">
-          <%= link_to "Log In", login_path, class: "nav-link" %>
-        </li>
-        <% else %>
+        <% if logged_in? %>
         <li class="nav-item active">
           <%= link_to "+New CoffeeCard", new_article_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to "My profile(#{User.find(session[:user_id]).username})", user_path(session[:user_id]), class: "nav-link" %>
+          <%= link_to "My profile(#{current_user.username})", user_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
+        </li>
+        <% else %>
+        <li class="nav-item active">
+          <%= link_to "Log In", login_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Sign Up", signup_path, class: "nav-link" %>
         </li>
         <% end %>
     </div>
