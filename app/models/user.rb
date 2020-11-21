@@ -16,5 +16,5 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :about, length: 5..250
+  validates :about, length: 0..250
 end

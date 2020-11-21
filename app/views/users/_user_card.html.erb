@@ -12,7 +12,7 @@
             <div class="signup-label"><%= pluralize(user.articles.count, "CoffeCard") %></div>
           </div>
           <% if logged_in? && user == current_user %>
-          <%= link_to  "Edit profile", edit_user_path(session[:user_id]), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
           <% end %>
         </div>
 
