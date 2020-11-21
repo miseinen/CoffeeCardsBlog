@@ -3,7 +3,7 @@
   <div class="container">
     <%= render "shared/pagination", model: @articles %>
     <% @articles.each do |a| %>
-    <%= render "shared/coffee_card", article: a %>
+    <%= render "shared/coffee_card", article: a, show: false %>
     <% end %>
     <%= render "shared/pagination", model: @articles %>
   </div>

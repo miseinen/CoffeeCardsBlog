@@ -24,6 +24,9 @@
           <%= link_to "+New CoffeeCard", new_article_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
+          <%= link_to "Edit profile", edit_user_path(session[:user_id]), class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
           <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
         </li>
         <% end %>

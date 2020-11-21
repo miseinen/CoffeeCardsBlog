@@ -13,12 +13,17 @@
           </div>
         </div>
 
-        <div class="col main-text mr-5">
-          <p class="text-center lead font-italic">About:</p>
-          <% if list %>
-          <p class="text-bottom"><%= link_to  "#{user.username}'s profile", user_path(user), class: "btn btn-outline-light" %></p>
-          <% end %>
+        <% if list || user.about %>
+        <div class="col mr-5">
+          <div class=" main-text">
+            <p class="text-center lead font-italic">About:</p>
+            <p class="text-center lead pb-3 pr-1 pl-1"><%= user.about %></p>
+            <% if list %>
+            <p class="text-bottom pb-3"><%= link_to  "#{user.username}'s profile", user_path(user), class: "btn btn-outline-light" %></p>
+            <% end %>
+          </div>
         </div>
+        <% end %>
       </div>
       <div class="card-footer">
         Joined <%= time_ago_in_words user.created_at %> ago.

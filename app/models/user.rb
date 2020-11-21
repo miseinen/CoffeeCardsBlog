@@ -15,4 +15,6 @@ class User < ApplicationRecord
                     confirmation: true
 
   has_secure_password
+
+  validates :about, length: 5..250
 end

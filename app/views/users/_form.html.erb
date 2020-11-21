@@ -1,6 +1,6 @@
 <div id="page-content">
   <div class="container">
-    <div class="card text-center mt-4 mb-4", id=<%= image_id %>>
+    <div class="card text-center mt-4 mb-4" , id=<%= image_id %>>
       <div class="card-header">
         <h1 class="text-center mt-4 font-weight-bold" , id="form-title"><%= title %></h1>
       </div>
@@ -13,6 +13,14 @@
           <%= f.label :username, class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.text_field :username, class: "form-control signup-field", placeholder: :username %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :about, class: "col-2 col-form-label signup-label" %>
+          <div class="col-10">
+            <%= f.text_area :about, class: "form-control signup-field", rows: "3",
+             placeholder: "A few words about you", maxlength: get_maxlength(User, :about) %>
           </div>
         </div>
 
@@ -43,4 +51,3 @@
     </div>
   </div>
 </div>
- 
