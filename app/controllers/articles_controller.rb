@@ -28,18 +28,18 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.update(article_params)
+    if current_user.articles.update(article_params)
       flash[:notice] = "Article was updated successfully."
-      redirect_to @user
+      redirect_to current_user
     else
       render "edit"
     end
   end
 
   def destroy
-    @article.destroy
+    current_user.articles.find(params[:id]).destroy
     flash[:notice] = "Article was deleted successfully."
-    redirect_to @user
+    redirect_to current_user
   end
 
   private
