@@ -11,14 +11,14 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @article = current_user.articles.build
   end
 
   def edit
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     if @article.save
       flash[:notice] = "Article was created successfully."
       redirect_to @user
@@ -50,5 +50,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :description)
+  end
+
+  def current_user
+    @user = User.find(session[:user_id])
   end
 end

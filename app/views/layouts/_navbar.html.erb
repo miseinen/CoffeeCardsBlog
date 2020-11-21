@@ -14,15 +14,15 @@
         <li class="nav-item active">
           <%= link_to "All Users", users_path, class: "nav-link" %>
         </li>
-        <li class="nav-item active">
-          <%= link_to "+New CoffeeCard", new_article_path, class: "nav-link" %>
-        </li>
 
         <% if session[:user_id] == nil %>
         <li class="nav-item active">
           <%= link_to "Log In", login_path, class: "nav-link" %>
         </li>
         <% else %>
+        <li class="nav-item active">
+          <%= link_to "+New CoffeeCard", new_article_path, class: "nav-link" %>
+        </li>
         <li class="nav-item active">
           <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
         </li>
