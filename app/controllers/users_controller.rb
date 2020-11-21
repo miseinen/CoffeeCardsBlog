@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @articles = @user.articles
-    @articles = Article.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
+    @articles = @articles.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
   end
 
   def create
