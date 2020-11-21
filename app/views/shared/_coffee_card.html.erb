@@ -2,14 +2,14 @@
   <div class="col-10 mt-4">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
       <div class="card-header">
-        <%= link_to  "#{article.title}", article_path(article), class: "card-title" %>
+        <%= link_to "#{article.title}", article_path(article), class: "card-title" %>
       </div>
       <div class="card-body text-left">
         <div class="row col-8">
-          <p class="card-text mb-3 lead"><%= article.description %></p>
+          <p class="card-text mb-3 pl-2 pr-2 lead"><%= article.description %></p>
         </div>
         <div class="card-body text-left font-italic">
-          by <%= link_to  article.user.username, user_path(article.user.id), id: "author-link" %>
+          by <%= link_to article.user.username, user_path(article.user.id), id: "author-link" %>
         </div>
 
         <% if logged_in? && article.user == current_user && !show %>
