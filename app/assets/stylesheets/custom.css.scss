@@ -108,16 +108,16 @@ body {
 }
 
 .card-header {
-  opacity: 0.8;
-  background-color: #a38971;
+  background-color: rgba(163,137,113,.8);
   color: white;
 }
 
 .card-title {
   color: rgb(124, 37, 37);
-  font-size: x-large;
-  font-weight: bold;
+  font-size: xx-large;
+  font-weight: bolder;
   font-family: "Lucida Sans Unicode";
+  letter-spacing: -1px;
 }
 
 .card-title:hover {
