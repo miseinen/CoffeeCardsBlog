@@ -6,11 +6,11 @@
   <% if @articles.count > 0 %>
   <h1 class="text-center", id="users-articles"><%= @user.username %>'s CoffeeCards</h1>
   <div class="container">
-    <%= render "shared/pagination", model: @articles %>
+    <%= render "shared/pagination", model: @articles, anchor: "users-articles" %>
     <% @articles.each do |a| %>
     <%= render "shared/coffee_card", article: a, show: false %>
     <% end %>
-    <%= render "shared/pagination", model: @articles %>
+    <%= render "shared/pagination", model: @articles, anchor: "users-articles" %>
   </div>
   <% end %>
 </div>

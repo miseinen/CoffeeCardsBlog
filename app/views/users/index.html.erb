@@ -1,10 +1,10 @@
 <div id="page-content">
   <h1 class="text-center mt-4">All Users</h1>
   <div class="container">
-    <%= render "shared/pagination", model: @users %>
+    <%= render "shared/pagination", model: @users, anchor: '' %>
     <% @users.each do |u| %>
     <%= render "user_card", user: u, list: true %>
     <% end %>
-    <%= render "shared/pagination", model: @users %>
+    <%= render "shared/pagination", model: @users, anchor: '' %>
   </div>
 </div>

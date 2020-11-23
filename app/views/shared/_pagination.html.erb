@@ -1,4 +1,4 @@
 <div class="pagination pagination-sm justify-content-center mt-2">
   <%= will_paginate(model, previous_label: "<--", 
-      next_label: "-->", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer ) %>
+      next_label: "-->", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer, params: {anchor: anchor}) %>
 </div>

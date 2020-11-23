@@ -1,10 +1,10 @@
 <div id="page-content">
   <h1 class="text-center mt-4">All CoffeeCards</h1>
   <div class="container">
-    <%= render "shared/pagination", model: @articles %>
+    <%= render "shared/pagination", model: @articles, anchor: '' %>
     <% @articles.each do |a| %>
     <%= render "shared/coffee_card", article: a, show: false %>
     <% end %>
-    <%= render "shared/pagination", model: @articles %>
+    <%= render "shared/pagination", model: @articles, anchor: '' %>
   </div>
 </div>
