@@ -4,7 +4,7 @@
     <%= render "user_card", user: @user, list: false %>
   </div>
   <% if @articles.count > 0 %>
-  <h1 class="text-center">CoffeeCards</h1>
+  <h1 class="text-center", id="users-articles"><%= @user.username %>'s CoffeeCards</h1>
   <div class="container">
     <%= render "shared/pagination", model: @articles %>
     <% @articles.each do |a| %>

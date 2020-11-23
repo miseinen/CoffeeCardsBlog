@@ -9,7 +9,8 @@
         <div class="col">
           <%= image_tag "avatar.jpg", size: "200x200", alt: user.username, class: "avatar" %>
           <div class="card-body text-center font-italic">
-            <div class="signup-label"><%= pluralize(user.articles.count, "CoffeCard") %></div>
+            <%= link_to pluralize(user.articles.count, "CoffeCard"), user_path(user, anchor: "users-articles"),
+             class: "signup-label coffecard-link" %>
           </div>
           <% if logged_in? && user == current_user %>
           <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
