@@ -17,8 +17,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @articles = @user.articles
-    @articles = @articles.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
+    @coffeecards = @user.coffeecards
+    @coffeecards = @coffeecards.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
   end
 
   def create

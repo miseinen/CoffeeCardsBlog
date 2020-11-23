@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to "All CoffeeCards", articles_path, class: "nav-link" %>
+          <%= link_to "All CoffeeCards", coffeecards_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "All Users", users_path, class: "nav-link" %>
@@ -17,7 +17,7 @@
 
         <% if logged_in? %>
         <li class="nav-item active">
-          <%= link_to "+New CoffeeCard", new_article_path, class: "nav-link" %>
+          <%= link_to "+New CoffeeCard", new_coffeecard_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "My profile(#{'(Admin)' if current_user.admin?} #{current_user.username})", user_path(current_user), class: "nav-link" %>

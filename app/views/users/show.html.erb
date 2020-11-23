@@ -3,14 +3,14 @@
   <div class="container">
     <%= render "user_card", user: @user, list: false %>
   </div>
-  <% if @articles.count > 0 %>
-  <h1 class="text-center", id="users-articles"><%= @user.username %>'s CoffeeCards</h1>
+  <% if @coffeecards.count > 0 %>
+  <h1 class="text-center", id="users-coffeecards"><%= @user.username %>'s CoffeeCards</h1>
   <div class="container">
-    <%= render "shared/pagination", model: @articles, anchor: "users-articles" %>
-    <% @articles.each do |a| %>
-    <%= render "shared/coffee_card", article: a, show: false %>
+    <%= render "shared/pagination", model: @coffeecards, anchor: "users-coffeecards" %>
+    <% @coffeecards.each do |a| %>
+    <%= render "shared/coffee_card", coffeecard: a, show: false %>
     <% end %>
-    <%= render "shared/pagination", model: @articles, anchor: "users-articles" %>
+    <%= render "shared/pagination", model: @coffeecards, anchor: "users-coffeecards" %>
   </div>
   <% end %>
 </div>

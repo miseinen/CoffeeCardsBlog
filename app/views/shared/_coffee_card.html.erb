@@ -2,27 +2,27 @@
   <div class="col-10 mt-4">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
       <div class="card-header">
-        <%= link_to "#{article.title}", article_path(article), class: "card-title" %>
+        <%= link_to "#{coffeecard.title}", coffeecard_path(coffeecard), class: "card-title" %>
       </div>
       <div class="card-body text-left">
         <div class="row col-8">
-          <p class="card-text mb-3 pl-2 pr-2 lead"><%= article.description %></p>
+          <p class="card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
         </div>
         <div class="card-body text-left font-italic">
-          by <%= link_to article.user.username, user_path(article.user.id), id: "author-link" %>
+          by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id), id: "author-link" %>
         </div>
 
-        <% if logged_in? && (current_user.admin? || article.user == current_user) && !show %>
+        <% if logged_in? && (current_user.admin? || coffeecard.user == current_user) && !show %>
         <div class="text-left offset-3">
-          <%= link_to  "Show", article_path(article), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  "Edit", edit_article_path(article), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  "Delete", article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  "Show", coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  "Edit", edit_coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  "Delete", coffeecard_path(coffeecard), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
         </div>
         <% end %>
       </div>
       <div class="card-footer">
-        Updated <%= time_ago_in_words article.updated_at %> ago.
-        Created <%= time_ago_in_words article.created_at %> ago.
+        Updated <%= time_ago_in_words coffeecard.updated_at %> ago.
+        Created <%= time_ago_in_words coffeecard.created_at %> ago.
       </div>
     </div>
   </div>

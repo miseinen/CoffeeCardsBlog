@@ -5,15 +5,15 @@
         <h1 class="text-center mt-4" , id="form-title"><%= title %></h1>
       </div>
       <div class="card-body">
-        <%= render "/shared/errors", error_target: @article %>
+        <%= render "/shared/errors", error_target: @coffeecard %>
 
-        <%= form_with(model: @article, local: true) do |f| %>
+        <%= form_with(model: @coffeecard, local: true) do |f| %>
 
         <div class="form-group row">
           <%= f.label 'Today\'s Coffee Time Theme', class: "col-2 col-form-label" %>
           <div class="col-10">
             <%= f.text_field :title, class: "form-control", placeholder: "Title",
-             maxlength: get_maxlength(Article, :title) %>
+             maxlength: get_maxlength(Coffeecard, :title) %>
           </div>
         </div>
 
@@ -21,7 +21,7 @@
           <%= f.label "Your thoughts", class: "col-2 col-form-label" %>
           <div class="col-10">
             <%= f.text_area :description, class: "form-control", id: "exampleFormControlTextarea1", rows:"7",
-             placeholder: "Your today's thoughts or dreams", maxlength: get_maxlength(Article, :description)  %>
+             placeholder: "Your today's thoughts or dreams", maxlength: get_maxlength(Coffeecard, :description)  %>
           </div>
         </div>
         <p class="text-center"><%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %></p>
