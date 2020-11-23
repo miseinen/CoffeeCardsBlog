@@ -1,5 +1,16 @@
 @import "bootstrap/dist/css/bootstrap";
 
+h1 > a{
+  color: rgb(124, 37, 37);
+  font-size: xx-larger;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode";
+}
+
+h1 > a:hover{
+  color: rgb(124, 37, 37);
+}
+
 /* Navbar */
 .navbar {
   background-color: black !important;

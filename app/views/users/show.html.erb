@@ -1,10 +1,11 @@
 <div id="page-content">
   <h1><% @user.username %></h1>
-  <div class="container">
+  <div class="container", id="users-profile">
     <%= render "user_card", user: @user, list: false %>
   </div>
   <% if @coffeecards.count > 0 %>
-  <h1 class="text-center", id="users-coffeecards"><%= @user.username %>'s CoffeeCards</h1>
+  <h1 class="text-center", id="users-coffeecards">
+  <%= link_to @user.username, anchor: "users-profile" %>'s CoffeeCards</h1>
   <div class="container">
     <%= render "shared/pagination", model: @coffeecards, anchor: "users-coffeecards" %>
     <% @coffeecards.each do |a| %>
