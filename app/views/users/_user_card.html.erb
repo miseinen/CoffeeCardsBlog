@@ -14,7 +14,9 @@
           </div>
           <% if logged_in? && user == current_user %>
           <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to "Delete account", user_path(current_user), method: :delete, data: { confirm: "Are you sure?" },
+          <% end %>
+          <% if current_user.admin? %>
+          <%= link_to "Delete account", user_path(user), method: :delete, data: { confirm: "Are you sure?" },
           class: "btn btn-outline-light btn-sm" %>
           <% end %>
         </div>

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
-  before_action :require_user, only: [:edit, :update]
-  before_action :require_same_user, only: [:edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:edit, :update, :destroy]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   PER_PAGE = 2
 
@@ -42,10 +42,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
-    session[:user_id] = nil
+    @user.destroy
     flash[:notice] = "Account was deleted successfully."
-    redirect_to login_path
+    if @user == current_user
+      session[:user_id] = nil
+      redirect_to login_path
+    else
+      redirect_to users_path
+    end
   end
 
   private
@@ -59,6 +63,8 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    redirect_to @user if current_user != @user
+    if current_user != @user && !current_user.admin?
+      redirect_to @user
+    end
   end
 end

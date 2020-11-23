@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
   end
 
   def require_same_user
-    redirect_to @article if current_user != @article.user
+    if current_user != @article.user && !current_user.admin?
+      redirect_to @article 
+    end
   end
 end

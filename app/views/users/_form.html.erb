@@ -47,7 +47,13 @@
           </div>
         </div>
 
-        <p class="text-center"><%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %></p>
+        <p class="text-center">
+          <%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %>
+          <% if edit %>
+          <%= link_to "Delete account", user_path(@user), method: :delete, data: { confirm: "Are you sure?" },
+          class: "btn btn-outline-danger" %>
+          <% end %>
+        </p>
         <% end %>
       </div>
     </div>
