@@ -8,34 +8,43 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "All CoffeeCards", coffeecards_path, class: "nav-link" %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= I18n.locale %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "English", locale_root_path(:locale => :en), class: "dropdown-item" %>
+            <%= link_to "Русский", locale_root_path(:locale => :ru), class: "dropdown-item" %>
+          </div>
         </li>
         <li class="nav-item active">
-          <%= link_to "All Users", users_path, class: "nav-link" %>
+          <%= link_to "#{t 'navbar.all_coffeecards'}", coffeecards_path(:locale), class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "#{t 'navbar.all_users'}", users_path(:locale), class: "nav-link" %>
         </li>
 
         <% if logged_in? %>
         <li class="nav-item active">
-          <%= link_to "+New CoffeeCard", new_coffeecard_path, class: "nav-link" %>
+          <%= link_to "#{t 'navbar.new_coffeecard'}", new_coffeecard_path(:locale), class: "nav-link" %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to "My profile(#{'(Admin)' if current_user.admin?} #{current_user.username})", user_path(current_user), class: "nav-link" %>
+          <%= link_to "#{t 'navbar.my_profile'} #{(t 'navbar.admin_role') if current_user.admin?}#{current_user.username})", user_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
+          <%= link_to "#{t 'navbar.logout'}", logout_path(:locale), class: "nav-link", method: :delete %>
         </li>
       </ul>
       <% else %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to "Log In", login_path, class: "nav-link" %>
+          <%= link_to "#{t 'navbar.login'}", login_path(:locale), class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to "Sign Up", signup_path, class: "nav-link" %>
+          <%= link_to "#{t 'navbar.signup'}", signup_path(:locale), class: "nav-link" %>
         </li>
       </ul>
       <% end %>

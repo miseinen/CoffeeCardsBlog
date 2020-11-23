@@ -25,6 +25,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.1.0'
 # Pagination with bootstrap
 gem 'bootstrap-will_paginate', '~> 1.0'
+# Internationalize and/or localize
+gem 'rails-i18n', '~> 6.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

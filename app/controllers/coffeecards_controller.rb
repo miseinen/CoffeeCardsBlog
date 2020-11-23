@@ -23,7 +23,7 @@ class CoffeecardsController < ApplicationController
     @coffeecard = current_user.coffeecards.build(coffeecard_params)
     if @coffeecard.save
       flash[:notice] = "CoffeeCard was created successfully."
-      redirect_to current_user
+      redirect_to @coffeecard
     else
       render "new"
     end

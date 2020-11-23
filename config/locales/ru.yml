@@ -1,0 +1,16 @@
+ru:
+  main_page:
+    greeting: Добро пожаловать в CoffeeCards блог!
+    main_text: Когда мы проводим время за чашечкой любимого горячего кофе, нас часто посещают мечты и вдохновляющие мысли. Здесь можно оставить след этого времени на CoffeеCard ("Кофейной карточке"), чтобы поделиться с остальными ценителями кофе.
+    main_text_footer: Приятного времяпрепровождения в уютном блоге!
+    signup_button: Присоединиться
+
+  navbar:
+    all_coffeecards: Все CoffeeCards
+    all_users: Все пользователи
+    new_coffeecard: +Новая CoffeeCard
+    my_profile: Мой профиль
+    admin_role: Админ
+    logout: Выйти
+    login: Войти
+    signup: Регистрация
