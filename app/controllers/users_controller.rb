@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Welcome to CoffeeTime Blog, #{@user.username}. You have successfully signed up."
-      redirect_to new_article_path
+      redirect_to new_coffeecard_path
     else
       render "new"
     end

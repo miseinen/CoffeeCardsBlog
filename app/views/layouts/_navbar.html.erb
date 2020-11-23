@@ -19,20 +19,26 @@
         <li class="nav-item active">
           <%= link_to "+New CoffeeCard", new_coffeecard_path, class: "nav-link" %>
         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
           <%= link_to "My profile(#{'(Admin)' if current_user.admin?} #{current_user.username})", user_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
         </li>
-        <% else %>
+      </ul>
+      <% else %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
           <%= link_to "Log In", login_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Sign Up", signup_path, class: "nav-link" %>
         </li>
-        <% end %>
+      </ul>
+      <% end %>
     </div>
   </div>
 </nav>
