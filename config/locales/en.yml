@@ -26,7 +26,7 @@ en:
     email: Email
     enter_email: Введите свой электронный ящик
     enter_password: Введите пароль
-    login: Войти
+    login: Login
 
     button:
       show: Show

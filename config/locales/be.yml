@@ -1,0 +1,137 @@
+be:
+  general:
+    updated: Абноўлена
+    created: Створана
+    ago: назад
+    you_sure?: Вы ўпэўнены?
+    all_users: Усе карыстальнікі
+    all_coffeecards: Усе CoffeeCards
+    password: Пароль
+    email: Email
+    enter_email: Калі ласка, увядзіце сваю электронную скрыню
+    enter_password: Увядзіце пароль
+    login: Увайсці
+
+    button:
+      show: Паказаць
+      edit: Адрэдагаваць
+      delete: Выдаліць
+      submit: Адправіць
+
+  main_page:
+    greeting: Запрашаем у CoffeeCards блог!
+    main_text: Калі мы праводзім час за кубачкам любімай гарачай кавы, нас часта наведваюць мары і натхняюць думкі. Тут можна пакінуць след гэтага часу на CoffeеCard («Картцы Кавы»), каб падзяліцца з астатнімі знатакамі кавы.
+    main_text_footer: Атрымлівайце асалоду ад ўтульнага блогу!
+    signup_button: Далучыцца
+
+  navbar:
+    new_coffeecard: +Новая CoffeeCard
+    my_profile: Мой профіль
+    admin_role: Адмін
+    logout: Выйсці
+    signup: Рэгістрацыя
+
+  coffeecard:
+    edit: Рэдагаваць CoffeeCard
+    create_coffeecard: Стварыць новую CoffeeCard
+    form:
+      coffee_theme: Тэма для разважання
+      enter_title: Загаловак
+      thoughts: Думкіб якія наведалі
+      enter_thoughts: Пару радкоў аб марах і натхненні
+    
+  user:
+    username: Псеўданім
+    about: Пра сябе
+    password_confirmation: Пацвярджэнне пароля
+    enter_username: Калі ласка, увядзіце свой псеўданім
+    enter_about: Пару слоў пра сябе
+    enter_password_confirmation: Пацвердзіце пароль
+    delete_profile: Выдаліць акаўнт
+    new_user: Далучыцца да CoffeeCards блогу
+
+    user_card:
+      edit: Рэдагаваць профіль
+      delete: Выдаліць акаўнт
+      profile: Глядзець профіль
+      joined: Далучыўся(далучылася) да супольнасцi
+
+  controller:
+    application:
+      alert:
+        must_logged_in: Вы павінны ўвайсці ў акаўнт
+    coffecard:
+      notice: 
+        create: CoffeeCard "%{title}" паспяхова створана
+        update: CoffeeCard "%{title}" паспяхова абноўлена
+        delete: CoffeeCard "%{title}" выдалена
+    user:
+      notice:
+        create: Сардэчна запрашаем у CoffeeCards блог,% {username}! Вы паспяхова зайшлi ў акаўнт
+        update: Профіль паспяхова абноўлены
+        delete: Акаўнт паспяхова выдалены
+    session:
+      notice:
+        logout: Вы выйшлі з акаўнта
+      alert:
+        incorrect: Пошта ці пароль не сапраўдныя
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: каля 1 гадзіны
+        other: каля %{count} гадзін
+      about_x_months:
+        one: каля 1 месяца
+        other: около %{count} месяцаў
+      about_x_years:
+        one: каля 1 года
+        other: около %{count} гадоў
+      almost_x_years:
+        one: амаль 1 год
+        two: амаль 2 года
+        three: амаль 3 года
+        four: амаль 4 года
+        other: амаль %{count} гадоў
+      half_a_minute: паўхвіліны
+      less_than_x_minutes:
+        zero: менш хвіліны
+        one: менш хвіліны
+        other: менш %{count} хвілін
+      less_than_x_seconds:
+        zero: менш секунды
+        one: менш секунды
+        other: менш %{count} секунд
+      over_x_years:
+        one: больш за год
+        other: больш за %{count} гадоў
+      x_days:
+        one: 1 гадзіна
+        two: 2 гадзіны
+        three: 3 гадзіны
+        four: 4 гадзіны
+        other: "%{count} гадзін"
+      x_minutes:
+        one: 1 хвіліна
+        two: 2 хвіліны
+        three: 3 хвіліны
+        four: 4 хвіліны
+        other: "%{count} хвілін"
+      x_months:
+        one: 1 месяц
+        two: 2 месяцы
+        three: 3 месяцы
+        four: 4 месяцы
+        other: "%{count} месяцаў"
+      x_years:
+        one: 1 год
+        two: 2 гады
+        three: 3 гады
+        four: 4 гады
+        other: "%{count} гадоў"
+      x_seconds:
+        one: 1 секунда
+        two: 2 секунды
+        three: 3 секунды
+        four: 4 секунды
+        other: "%{count} секунд"

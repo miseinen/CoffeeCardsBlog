@@ -44,7 +44,7 @@ ru:
     username: Псевдоним
     about: О себе
     password_confirmation: Подтверждение пароля
-    enter_username: Ввведите свой псевдоним
+    enter_username: Введите свой псевдоним
     enter_about: Пару слов о себе
     enter_password_confirmation: Подтвердите пароль
     delete_profile: Удалить аккаунт
@@ -101,7 +101,7 @@ ru:
       less_than_x_seconds:
         zero: меньше секунды
         one: меньше секунды
-        other: меньше de %{count} секунд
+        other: меньше %{count} секунд
       over_x_years:
         one: более года
         other: более %{count} лет
