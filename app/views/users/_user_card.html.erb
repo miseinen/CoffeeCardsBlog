@@ -3,20 +3,20 @@
     <div class="card text-center shadow mb-3 bg-white rounded" , id="user-card">
 
       <div class="card-header">
-        <%= link_to "#{user.username}", user_path(user), class: "card-title" %>
+        <%= link_to "#{user.username}", user_path(I18n.locale, user), class: "card-title" %>
       </div>
       <div class="card-body row">
         <div class="col">
           <%= image_tag "avatar.jpg", size: "200x200", alt: user.username, class: "avatar" %>
           <div class="card-body text-center font-italic">
-            <%= link_to pluralize(user.coffeecards.count, "CoffeCard"), user_path(user, anchor: "users-coffeecards"),
+            <%= link_to pluralize(user.coffeecards.count, "CoffeCard"), user_path(I18n.locale, user, anchor: "users-coffeecards"),
              class: "signup-label coffecard-link" %>
           </div>
           <% if logged_in? && user == current_user %>
-          <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to t('user.user_card.edit'), edit_user_path(I18n.locale, current_user), class: "btn btn-outline-light btn-sm" %>
           <% end %>
-          <% if user.admin? %>
-          <%= link_to "Delete account", user_path(user), method: :delete, data: { confirm: "Are you sure?" },
+          <% if current_user.admin? %>
+          <%= link_to t('user.user_card.delete'), user_path(I18n.locale, user), method: :delete, data: { confirm: "Are you sure?" },
           class: "btn btn-outline-light btn-sm" %>
           <% end %>
         </div>
@@ -24,18 +24,18 @@
         <% if list || user.about %>
         <div class="col mr-5">
           <div class=" main-text">
-            <p class="text-center lead font-italic">About:</p>
+            <p class="text-center lead font-italic"><%= t('user.about') %></p>
             <p class="text-center lead pb-3 pr-1 pl-1"><%= user.about %></p>
             <% if list %>
             <p class="text-bottom pb-3">
-              <%= link_to "#{user.username}'s profile", user_path(user), class: "btn btn-outline-light" %></p>
+              <%= link_to t('user.user_card.profile'), user_path(I18n.locale, user), class: "btn btn-outline-light" %></p>
             <% end %>
           </div>
         </div>
         <% end %>
       </div>
       <div class="card-footer">
-        Joined <%= time_ago_in_words user.created_at %> ago.
+        <%= t('user.user_card.joined') %> <%= time_ago_in_words user.created_at %> <%= t('general.ago') %>.
       </div>
     </div>
   </div>

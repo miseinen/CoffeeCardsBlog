@@ -1,4 +1,16 @@
 ru:
+  general:
+    updated: Обновлено
+    created: Создано
+    ago: назад
+    you_sure?: Вы уверены?
+    all_users: Все пользователи
+    all_coffeecards: Все CoffeeCards
+    button:
+      show: Показать
+      edit: Отредактировать
+      delete: Удалить
+
   main_page:
     greeting: Добро пожаловать в CoffeeCards блог!
     main_text: Когда мы проводим время за чашечкой любимого горячего кофе, нас часто посещают мечты и вдохновляющие мысли. Здесь можно оставить след этого времени на CoffeеCard ("Кофейной карточке"), чтобы поделиться с остальными ценителями кофе.
@@ -6,8 +18,6 @@ ru:
     signup_button: Присоединиться
 
   navbar:
-    all_coffeecards: Все CoffeeCards
-    all_users: Все пользователи
     new_coffeecard: +Новая CoffeeCard
     my_profile: Мой профиль
     admin_role: Админ
@@ -17,15 +27,32 @@ ru:
 
   coffeecard:
     edit: Редактировать CoffeeCard
-    all_coffeecards: Все CoffeeCards
     create_coffeecard: Создать новую CoffeeCard
-    updated: Обновлено
-    created: Создано
-    ago: назад
-    button:
-      show: Показать
-      edit: Отредактировать
-      delete: Удалить
+    form:
+      coffee_theme: Тема для размышления
+      enter_title: Заголовок
+      thoughts: Посетившие мысли
+      enter_thoughts: Пару строк о мечтах и вдохновении
+    
+  user:
+    username: Псевдоним
+    about: О себе
+    password: Пароль
+    email: Email
+    password_confirmation: Подтверждение пароля
+    enter_username: Ввведите свой псевдоним
+    enter_email: Введите свой электронный ящик
+    enter_about: Пару слов о себе
+    enter_password: Введите пароль
+    enter_password_confirmation: Подтвердите пароль
+    delete_profile: Удалить аккаунт
+    new_user: Присоединиться к CoffeeCards блогу
+
+    user_card:
+      edit: Редактировать профиль
+      delete: Удалить аккаунт
+      profile: Смотреть профиль
+      joined: Вступил(а) в сообщество
 
   datetime:
     distance_in_words:

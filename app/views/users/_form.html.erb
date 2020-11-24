@@ -10,47 +10,48 @@
         <%= form_with(model: @user, local: true) do |f| %>
 
         <div class="form-group row">
-          <%= f.label :username, class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('user.username'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.text_field :username, class: "form-control signup-field",
-             placeholder: "Enter your username", maxlength: get_maxlength(User, :username) %>
+             placeholder: t('user.enter_username'), maxlength: get_maxlength(User, :username) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :about, class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('user.about'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.text_area :about, class: "form-control signup-field", rows: "3",
-             placeholder: "A few words about you", maxlength: get_maxlength(User, :about) %>
+             placeholder: t('user.enter_about'), maxlength: get_maxlength(User, :about) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :email, class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('user.email'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.email_field :email, class: "form-control signup-field",
-             placeholder: "Enter your email address", maxlength: get_maxlength(User, :email) %>
+             placeholder: t('user.enter_email'), maxlength: get_maxlength(User, :email) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :password, class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('user.password'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
-            <%= f.password_field :password, class: "form-control signup-field", placeholder: "Enter your password" %>
+            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('user.enter_password') %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label "Confirm Password", class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('user.password_confirmation'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
-            <%= f.password_field :password_confirmation, class: "form-control signup-field", placeholder: "Confirm password" %>
+            <%= f.password_field :password_confirmation, class: "form-control signup-field",
+             placeholder: t('user.enter_password_confirmation') %>
           </div>
         </div>
 
         <p class="text-center">
           <%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %>
           <% if edit %>
-          <%= link_to "Delete account", user_path(@user), method: :delete, data: { confirm: "Are you sure?" },
+          <%= link_to t('user.delete_account'), user_path(@user), method: :delete, data: { confirm: t('general.you_sure?') },
           class: "btn btn-outline-danger" %>
           <% end %>
         </p>

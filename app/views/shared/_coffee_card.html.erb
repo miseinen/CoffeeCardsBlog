@@ -2,27 +2,28 @@
   <div class="col-10 mt-4">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
       <div class="card-header">
-        <%= link_to "#{coffeecard.title}", coffeecard_path(coffeecard, :locale), class: "card-title" %>
+        <%= link_to coffeecard.title, coffeecard_path(I18n.locale, coffeecard.id), class: "card-title" %>
       </div>
       <div class="card-body text-left">
         <div class="row col-8">
           <p class="card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
         </div>
         <div class="card-body text-left font-italic">
-          by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id, :locale), id: "author-link" %>
+          by <%= link_to coffeecard.user.username, user_path(I18n.locale, coffeecard.user.id), id: "author-link" %>
         </div>
 
         <% if logged_in? && (current_user.admin? || coffeecard.user == current_user) && !show %>
         <div class="text-left offset-3">
-          <%= link_to  t('coffeecard.button.show'), coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  t('coffeecard.button.edit'), edit_coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  t('coffeecard.button.delete'), coffeecard_path(coffeecard), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('general.button.show'), coffeecard_path(I18n.locale, coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('general.button.edit'), edit_coffeecard_path(I18n.locale, coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('general.button.delete'), coffeecard_path(I18n.locale, coffeecard), method: :delete,
+           data: {confirm: t('general.you_sure?')}, class: "btn btn-outline-light btn-sm" %>
         </div>
         <% end %>
       </div>
       <div class="card-footer">
-        <%= t 'coffeecard.updated' %> <%= time_ago_in_words coffeecard.updated_at %> <%= t 'coffeecard.ago' %>.
-        <%= t 'coffeecard.created' %> <%= time_ago_in_words coffeecard.created_at %> <%= t 'coffeecard.ago' %>.
+        <%= t 'general.updated' %> <%= time_ago_in_words coffeecard.updated_at %> <%= t 'general.ago' %>.
+        <%= t 'general.created' %> <%= time_ago_in_words coffeecard.created_at %> <%= t 'general.ago' %>.
       </div>
     </div>
   </div>

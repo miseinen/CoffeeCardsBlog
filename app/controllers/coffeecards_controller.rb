@@ -23,7 +23,7 @@ class CoffeecardsController < ApplicationController
     @coffeecard = current_user.coffeecards.build(coffeecard_params)
     if @coffeecard.save
       flash[:notice] = "CoffeeCard was created successfully."
-      redirect_to @coffeecard
+      redirect_to coffeecard_path(I18n.locale, @coffeecard)
     else
       render "new"
     end
@@ -41,7 +41,7 @@ class CoffeecardsController < ApplicationController
   def destroy
     @coffeecard.destroy
     flash[:notice] = "CoffeeCard was deleted successfully."
-    redirect_to current_user
+    redirect_to user_path(I18n.locale, current_user)
   end
 
   private

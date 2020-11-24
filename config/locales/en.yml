@@ -15,6 +15,18 @@
 #     I18n.locale = :es
 #
 en:
+  general:
+    updated: Updated
+    created: Created
+    ago: ago
+    you_sure?: Are you sure?
+    all_users: All Users
+    all_coffeecards: All CoffeeCards
+    button:
+      show: Show
+      edit: Edit
+      delete: Delete
+
   main_page:
     greeting: Welcome to CoffeeCards blog
     main_text: When we spend time with our cup of favourite and hot coffee we are often visited  by dreams and inspiring thoughts. This is a place for leaving trace of this time on CoffeeCard  to share with other coffee connoisseurs.
@@ -22,8 +34,6 @@ en:
     signup_button: Sign Up!
 
   navbar:
-    all_coffeecards: All CoffeeCards
-    all_users: All Users
     new_coffeecard: +New CoffeeCard
     my_profile: My profile
     admin_role: Admin
@@ -33,12 +43,29 @@ en:
 
   coffeecard:
     edit: Edit CoffeeCard
-    all_coffeecards: All CoffeeCards
     create_coffeecard: Create a new CoffeeCard
-    updated: Updated
-    created: Created
-    ago: ago
-    button:
-      show: Show
-      edit: Edit
-      delete: Delete 
+    form:
+      coffee_theme: Coffee Theme
+      enter_title: Enter title
+      thoughts: Visited thoughts
+      enter_thoughts: A few lines about inspiration
+
+  user:
+    username: Username
+    about: About
+    email: Email address
+    password: Password
+    password_confirmation: Confirm password
+    enter_username: Enter your password
+    enter_email: Enter your email address
+    enter_about: A few words about you
+    enter_password: Enter password
+    enter_password_confirmation: Confirm password
+    delete_profile: Delete account
+    new_user: Sign Up for CoffeeCards Blog
+
+    user_card:
+      edit: Edit profile
+      delete: Delete account
+      profile: See profile
+      joined: Joined

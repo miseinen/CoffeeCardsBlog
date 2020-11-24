@@ -1,5 +1,5 @@
 <div id="page-content">
-  <h1 class="text-center mt-4">All Users</h1>
+  <h1 class="text-center mt-4"><%= t('general.all_users') %></h1>
   <div class="container">
     <%= render "shared/pagination", model: @users, anchor: '' %>
     <% @users.each do |u| %>

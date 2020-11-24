@@ -18,33 +18,34 @@
           </div>
         </li>
         <li class="nav-item active">
-          <%= link_to t('navbar.all_coffeecards'), coffeecards_path(:locale), class: "nav-link" %>
+          <%= link_to t('general.all_coffeecards'), coffeecards_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to t('navbar.all_users'), users_path(:locale), class: "nav-link" %>
+          <%= link_to t('general.all_users'), users_path, class: "nav-link" %>
         </li>
 
         <% if logged_in? %>
         <li class="nav-item active">
-          <%= link_to t('navbar.new_coffeecard'), new_coffeecard_path(:locale), class: "nav-link" %>
+          <%= link_to t('navbar.new_coffeecard'), new_coffeecard_path, class: "nav-link" %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to "#{t('navbar.my_profile')} #{t('navbar.admin_role') if current_user.admin?} (#{current_user.username})", user_path(current_user), class: "nav-link" %>
+          <%= link_to "#{t('navbar.my_profile')}"+"#{t('navbar.admin_role') if current_user.admin?}"+"(#{current_user.username})",
+           user_path(I18n.locale, current_user), class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to t('navbar.logout'), logout_path(:locale), class: "nav-link", method: :delete %>
+          <%= link_to t('navbar.logout'), logout_path, class: "nav-link", method: :delete %>
         </li>
       </ul>
       <% else %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to t('navbar.login'), login_path(:locale), class: "nav-link" %>
+          <%= link_to t('navbar.login'), login_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to t('navbar.signup'), signup_path(:locale), class: "nav-link" %>
+          <%= link_to t('navbar.signup'), signup_path, class: "nav-link" %>
         </li>
       </ul>
       <% end %>
