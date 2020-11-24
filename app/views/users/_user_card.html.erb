@@ -14,10 +14,10 @@
           </div>
           <% if logged_in? && user == current_user %>
           <%= link_to t('user.user_card.edit'), edit_user_path(I18n.locale, current_user), class: "btn btn-outline-light btn-sm" %>
-          <% end %>
           <% if current_user.admin? %>
           <%= link_to t('user.user_card.delete'), user_path(I18n.locale, user), method: :delete, data: { confirm: "Are you sure?" },
           class: "btn btn-outline-light btn-sm" %>
+          <% end %>
           <% end %>
         </div>
 

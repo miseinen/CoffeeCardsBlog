@@ -26,17 +26,17 @@
         </div>
 
         <div class="form-group row">
-          <%= f.label t('user.email'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('general.email'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.email_field :email, class: "form-control signup-field",
-             placeholder: t('user.enter_email'), maxlength: get_maxlength(User, :email) %>
+             placeholder: t('general.enter_email'), maxlength: get_maxlength(User, :email) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('user.password'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('general.password'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
-            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('user.enter_password') %>
+            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('general.enter_password') %>
           </div>
         </div>
 
@@ -49,7 +49,7 @@
         </div>
 
         <p class="text-center">
-          <%= f.submit :Submit, class: "btn btn-secondary font-weight-bold" %>
+          <%= f.submit t('general.button.submit'), class: "btn btn-secondary font-weight-bold" %>
           <% if edit %>
           <%= link_to t('user.delete_account'), user_path(@user), method: :delete, data: { confirm: t('general.you_sure?') },
           class: "btn btn-outline-danger" %>

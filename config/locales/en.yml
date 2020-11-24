@@ -22,10 +22,17 @@ en:
     you_sure?: Are you sure?
     all_users: All Users
     all_coffeecards: All CoffeeCards
+    password: Пароль
+    email: Email
+    enter_email: Введите свой электронный ящик
+    enter_password: Введите пароль
+    login: Войти
+
     button:
       show: Show
       edit: Edit
       delete: Delete
+      submit: Отправить
 
   main_page:
     greeting: Welcome to CoffeeCards blog
