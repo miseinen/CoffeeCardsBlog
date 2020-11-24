@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Welcome to CoffeeTime Blog, #{@user.username}. You have successfully signed up."
+      flash[:notice] = t('controller.user.notice.create', username: @user.username)
       redirect_to new_coffeecard_path
     else
       render "new"
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = "Your account information was updated successfully."
+      flash[:notice] = t('controller.user.notice.update')
       redirect_to @user
     else
       render "edit"
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    flash[:notice] = "Account was deleted successfully."
+    flash[:notice] = t('controller.user.notice.delete')
     if @user == current_user
       session[:user_id] = nil
       redirect_to login_path

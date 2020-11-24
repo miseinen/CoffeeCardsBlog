@@ -22,7 +22,7 @@ class CoffeecardsController < ApplicationController
   def create
     @coffeecard = current_user.coffeecards.build(coffeecard_params)
     if @coffeecard.save
-      flash[:notice] = "CoffeeCard was created successfully."
+      flash[:notice] = t('controller.coffecard.notice.create', title: @coffeecard.title)
       redirect_to coffeecard_path(I18n.locale, @coffeecard)
     else
       render "new"
@@ -31,7 +31,7 @@ class CoffeecardsController < ApplicationController
 
   def update
     if @coffeecard.update(coffeecard_params)
-      flash[:notice] = "CoffeeCard was updated successfully."
+      flash[:notice] = t('controller.coffecard.notice.update', title: @coffeecard.title)
       redirect_to @coffeecard
     else
       render "edit"
@@ -40,7 +40,7 @@ class CoffeecardsController < ApplicationController
 
   def destroy
     @coffeecard.destroy
-    flash[:notice] = "CoffeeCard was deleted successfully."
+    flash[:notice] = t('controller.coffecard.notice.delete', title: @coffeecard.title)
     redirect_to user_path(I18n.locale, current_user)
   end
 

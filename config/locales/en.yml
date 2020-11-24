@@ -69,3 +69,23 @@ en:
       delete: Delete account
       profile: See profile
       joined: Joined
+
+  controller:
+    application:
+      alert:
+        must_logged_in: You must be logged in
+    coffecard:
+      notice: 
+        create: CoffeeCard "%{title}" was created successfully
+        update: CoffeeCard "%{title}" was updated successfully
+        delete: CoffeeCard "%{title}" was deleted successfully
+    user:
+      notice:
+        create: Welcome to CoffeeCards блог, %{username}! You signed up successfully
+        update: Profile was updated successfully
+        delete: Account was deleted successfully
+    session:
+      notice:
+        logout: Logged out
+      alert:
+        incorrect: Email or password is incorrect

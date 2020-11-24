@@ -54,6 +54,27 @@ ru:
       profile: Смотреть профиль
       joined: Вступил(а) в сообщество
 
+  controller:
+    application:
+      alert:
+        must_logged_in: Вы должны войти в аккаунт
+    coffecard:
+      notice: 
+        create: CoffeeCard "%{title}" успешно создана
+        update: CoffeeCard "%{title}" успешно обновлена
+        delete: CoffeeCard "%{title}" удалена
+    user:
+      notice:
+        create: Добро пожаловать в CoffeeCards блог, %{username}! Вы успешно зарегестрировались
+        update: Профиль успешно обновлен
+        delete: Аккаунт успешно удален
+    session:
+      notice:
+        logout: Вы вышли из аккаунта
+      alert:
+        incorrect: Почта или пароль не действительны
+
+
   datetime:
     distance_in_words:
       about_x_hours:
