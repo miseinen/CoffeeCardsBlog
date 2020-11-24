@@ -6,7 +6,9 @@ class CoffeecardsController < ApplicationController
   PER_PAGE = 2
 
   def index
-    @coffeecards = Coffeecard.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
+    locale = I18n.locale.to_s
+    @coffeecards = Coffeecard.where("text_lang = ?", locale)
+    @coffeecards = @coffeecards.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
   end
 
   def show
@@ -23,7 +25,7 @@ class CoffeecardsController < ApplicationController
     @coffeecard = current_user.coffeecards.build(coffeecard_params)
     if @coffeecard.save
       flash[:notice] = t('controller.coffecard.notice.create', title: @coffeecard.title)
-      redirect_to coffeecard_path(I18n.locale, @coffeecard)
+      redirect_to coffeecards_path
     else
       render "new"
     end
@@ -32,7 +34,7 @@ class CoffeecardsController < ApplicationController
   def update
     if @coffeecard.update(coffeecard_params)
       flash[:notice] = t('controller.coffecard.notice.update', title: @coffeecard.title)
-      redirect_to @coffeecard
+      redirect_to coffeecards_path
     else
       render "edit"
     end
@@ -41,7 +43,7 @@ class CoffeecardsController < ApplicationController
   def destroy
     @coffeecard.destroy
     flash[:notice] = t('controller.coffecard.notice.delete', title: @coffeecard.title)
-    redirect_to user_path(I18n.locale, current_user)
+    redirect_to user_path(current_user)
   end
 
   private
@@ -51,6 +53,6 @@ class CoffeecardsController < ApplicationController
   end
 
   def coffeecard_params
-    params.require(:coffeecard).permit(:title, :description)
+    params.require(:coffeecard).permit(:title, :description, :text_lang)
   end
 end

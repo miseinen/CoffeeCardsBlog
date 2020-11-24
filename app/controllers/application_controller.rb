@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
   around_action :switch_locale
 
+  protect_from_forgery
+
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -26,5 +28,9 @@ class ApplicationController < ActionController::Base
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
     I18n.with_locale(locale, &action)
+  end
+
+  def url_options
+    { locale: I18n.locale }.merge(super)
   end
 end

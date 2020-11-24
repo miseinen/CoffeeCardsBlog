@@ -1,11 +1,13 @@
 be:
+  language_name: Беларуская
+  
   general:
     updated: Абноўлена
     created: Створана
     ago: назад
     you_sure?: Вы ўпэўнены?
     all_users: Усе карыстальнікі
-    all_coffeecards: Усе CoffeeCards
+    all_coffeecards: Беларускiя CoffeeCards
     password: Пароль
     email: Email
     enter_email: Калі ласка, увядзіце сваю электронную скрыню
@@ -21,7 +23,7 @@ be:
   main_page:
     greeting: Запрашаем у CoffeeCards блог!
     main_text: Калі мы праводзім час за кубачкам любімай гарачай кавы, нас часта наведваюць мары і натхняюць думкі. Тут можна пакінуць след гэтага часу на CoffeеCard («Картцы Кавы»), каб падзяліцца з астатнімі знатакамі кавы.
-    main_text_footer: Атрымлівайце асалоду ад ўтульнага блогу!
+    main_text_footer: Атрымлівайце асалоду ад утульнага блогу!
     signup_button: Далучыцца
 
   navbar:
@@ -37,8 +39,9 @@ be:
     form:
       coffee_theme: Тэма для разважання
       enter_title: Загаловак
-      thoughts: Думкіб якія наведалі
+      thoughts: Думкі, якія наведалі
       enter_thoughts: Пару радкоў аб марах і натхненні
+      text_lang: Абярыце мову тэксту
     
   user:
     username: Псеўданім

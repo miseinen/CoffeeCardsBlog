@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
   <div class="container">
-    <%= link_to "CoffeeCards Blog", root_path , class: "navbar-brand", id: "logo" %>
+    <%= link_to "CoffeeCards Blog", root_path(I18n.locale), class: "navbar-brand", id: "logo" %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
@@ -9,9 +9,9 @@
             <%= image_tag  "lang_pic", size: '30x30', style: "filter: invert(100%);" %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "English", locale_root_path(:locale => :en), class: "dropdown-item" %>
-            <%= link_to "Русский", locale_root_path(:locale => :ru), class: "dropdown-item" %>
-            <%= link_to "Беларуская", locale_root_path(:locale => :be), class: "dropdown-item" %>
+            <% I18n.available_locales.each do |a| %>
+            <%= link_to I18n.t('language_name', locale: a), locale_root_path(locale: a), class: "dropdown-item" %>
+            <% end %>
           </div>
         </li>
         <li class="nav-item active">

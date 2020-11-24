@@ -15,13 +15,15 @@
 #     I18n.locale = :es
 #
 en:
+  language_name: English
+  
   general:
     updated: Updated
     created: Created
     ago: ago
     you_sure?: Are you sure?
     all_users: All Users
-    all_coffeecards: All CoffeeCards
+    all_coffeecards: English CoffeeCards
     password: Пароль
     email: Email
     enter_email: Введите свой электронный ящик
@@ -56,6 +58,7 @@ en:
       enter_title: Enter title
       thoughts: Visited thoughts
       enter_thoughts: A few lines about inspiration
+      text_lang: Select the language of the text
 
   user:
     username: Username

@@ -1,11 +1,13 @@
 ru:
+  language_name: Русский
+  
   general:
     updated: Обновлено
     created: Создано
     ago: назад
     you_sure?: Вы уверены?
     all_users: Все пользователи
-    all_coffeecards: Все CoffeeCards
+    all_coffeecards: Русские CoffeeCards
     password: Пароль
     email: Email
     enter_email: Введите свой электронный ящик
@@ -39,6 +41,7 @@ ru:
       enter_title: Заголовок
       thoughts: Посетившие мысли
       enter_thoughts: Пару строк о мечтах и вдохновении
+      text_lang: Выберите язык текста
     
   user:
     username: Псевдоним
