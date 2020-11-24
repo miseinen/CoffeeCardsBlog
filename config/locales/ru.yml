@@ -14,3 +14,75 @@ ru:
     logout: Выйти
     login: Войти
     signup: Регистрация
+
+  coffeecard:
+    edit: Редактировать CoffeeCard
+    all_coffeecards: Все CoffeeCards
+    create_coffeecard: Создать новую CoffeeCard
+    updated: Обновлено
+    created: Создано
+    ago: назад
+    button:
+      show: Показать
+      edit: Отредактировать
+      delete: Удалить
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: около 1 часа
+        other: около %{count} часов
+      about_x_months:
+        one: около 1 месяца
+        other: около %{count} месяцев
+      about_x_years:
+        one: около 1 года
+        other: около %{count} лет
+      almost_x_years:
+        one: почти 1 год
+        two: почти 2 года
+        three: почти 3 года
+        four: почти 4 года
+        other: почти %{count} лет
+      half_a_minute: полминуты
+      less_than_x_minutes:
+        zero: меньше минуты
+        one: меньше минуты
+        other: меньше %{count} минут
+      less_than_x_seconds:
+        zero: меньше секунды
+        one: меньше секунды
+        other: меньше de %{count} секунд
+      over_x_years:
+        one: более года
+        other: более %{count} лет
+      x_days:
+        one: 1 час
+        two: 2 часа
+        three: 3 часа
+        four: 4 часа
+        other: "%{count} часов"
+      x_minutes:
+        one: 1 минута
+        two: 2 минуты
+        three: 3 минуты
+        four: 4 минуты
+        other: "%{count} минут"
+      x_months:
+        one: 1 месяц
+        two: 2 месяца
+        three: 3 месяца
+        four: 4 месяца
+        other: "%{count} месяцев"
+      x_years:
+        one: 1 год
+        two: 2 года
+        three: 3 года
+        four: 4 года
+        other: "%{count} лет"
+      x_seconds:
+        one: 1 секунда
+        two: 2 секунды
+        three: 3 секунды
+        four: 4 секунды
+        other: "%{count} секунд"

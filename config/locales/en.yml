@@ -22,11 +22,23 @@ en:
     signup_button: Sign Up!
 
   navbar:
-      all_coffeecards: All CoffeeCards
-      all_users: All Users
-      new_coffeecard: +New CoffeeCard
-      my_profile: My profile
-      admin_role: Admin
-      logout: Logout
-      login: Login
-      signup: Sign Up
+    all_coffeecards: All CoffeeCards
+    all_users: All Users
+    new_coffeecard: +New CoffeeCard
+    my_profile: My profile
+    admin_role: Admin
+    logout: Logout
+    login: Login
+    signup: Sign Up
+
+  coffeecard:
+    edit: Edit CoffeeCard
+    all_coffeecards: All CoffeeCards
+    create_coffeecard: Create a new CoffeeCard
+    updated: Updated
+    created: Created
+    ago: ago
+    button:
+      show: Show
+      edit: Edit
+      delete: Delete 
