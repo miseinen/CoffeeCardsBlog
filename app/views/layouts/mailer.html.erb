@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    .button {
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: rgba(163, 137, 113, .8);
+      color: rgb(124, 37, 37);
+      border-radius: 15px 50px;
+    }
+
+    .card-body {
+      background-color: rgb(204, 195, 195);
+      color: black;
+      text-align: center;
+    }
+
+    .card-header {
+      background-color: rgba(163, 137, 113, .8);
+      color: white;
+      text-align: center;
+    }
+
+    .card-title {
+      color: rgb(124, 37, 37);
+      font-size: xx-large;
+      font-weight: bolder;
+      font-family: "Lucida Sans Unicode";
+      letter-spacing: -1px;
+      text-align: center;
+    }
+
+    .card-text {
+      padding-bottom: 7px;
+    }
+
+    .card-footer {
+      padding: 1px;
+      background-color: #42352c;
+      color: rgb(165, 160, 160);
+      font-style: italic;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+
 </html>
