@@ -17,4 +17,17 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :about, length: 0..250, allow_blank: true
+
+  def send_password_reset
+    generate_token(:reset_password_token)
+    self.reset_password_sent_at = Time.zone.now
+    save!
+    UserMailer.forgot_password(self).deliver
+  end
+
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
 end

@@ -24,17 +24,17 @@ en:
     you_sure?: Are you sure?
     all_users: All Users
     all_coffeecards: English CoffeeCards
-    password: Пароль
+    password: Password
     email: Email
-    enter_email: Введите свой электронный ящик
-    enter_password: Введите пароль
+    enter_email: Enter your email
+    enter_password: Enter your password
     login: Login
 
     button:
       show: Show
       edit: Edit
       delete: Delete
-      submit: Отправить
+      submit: Submit
 
   main_page:
     greeting: Welcome to CoffeeCards blog
@@ -91,7 +91,7 @@ en:
         delete: CoffeeCard "%{title}" was deleted successfully
     user:
       notice:
-        create: Welcome to CoffeeCards блог, %{username}! You signed up successfully
+        create: Welcome to CoffeeCards blog, %{username}! You signed up successfully
         update: Profile was updated successfully
         delete: Account was deleted successfully
     session:

@@ -28,6 +28,8 @@ gem 'bootstrap-will_paginate', '~> 1.0'
 # Internationalize and/or localize
 gem 'rails-i18n', '~> 6.0'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

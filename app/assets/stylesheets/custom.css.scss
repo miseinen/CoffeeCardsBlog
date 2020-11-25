@@ -96,6 +96,17 @@ body {
   flex-shrink: none;
 }
 
+.forgot_password_link{
+  color: rgb(201, 201, 201);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.forgot_password_link:hover{
+  text-decoration: underline;
+  color:  rgb(201, 201, 201);
+}
+
 /* Cards */
 .card {
   background-size: cover;
