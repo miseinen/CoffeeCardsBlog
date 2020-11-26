@@ -1,5 +1,5 @@
 <div class="row justify-content-md-center">
-  <div class="col-10 mt-4">
+  <div class="col-10 mt-2">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
       <div class="card-header">
         <%= link_to coffeecard.title, coffeecard_path(coffeecard), class: "card-title" %>
@@ -7,11 +7,27 @@
       <div class="card-body text-left">
         <div class="row col-8">
           <p class="card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
+          <div class="col-12  text-right font-italic">
+            <p style="text-align:left;">
+              by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id), id: "author-link" %>
+              <span style="float:right;">
+                <%= coffeecard.likes.count %>
+                <% if logged_in? %>
+                <% pre_like = coffeecard.likes.find { |like| like.user_id == current_user.id} %>
+                <% if pre_like %>
+                <%= link_to image_tag('liked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"), 
+            coffeecard_like_path(coffeecard, pre_like),  method: :delete %>
+                <% else %>
+                <%= link_to image_tag('notliked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"), 
+            coffeecard_likes_path(coffeecard), method: :post %>
+                <% end %>
+                <% else %>
+                <%= image_tag('notliked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;") %>
+                <% end %>
+              </span>
+            </p>
+          </div>
         </div>
-        <div class="card-body text-left font-italic">
-          by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id), id: "author-link" %>
-        </div>
-
         <% if logged_in? && (current_user.admin? || coffeecard.user == current_user) && !show %>
         <div class="text-left offset-3">
           <%= link_to  t('general.button.show'), coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>

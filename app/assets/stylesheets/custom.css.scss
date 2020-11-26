@@ -1,13 +1,13 @@
 @import "bootstrap/dist/css/bootstrap";
 
-h1 > a{
+h1 > a {
   color: rgb(124, 37, 37);
   font-size: xx-larger;
   font-weight: bold;
   font-family: "Lucida Sans Unicode";
 }
 
-h1 > a:hover{
+h1 > a:hover {
   color: rgb(124, 37, 37);
 }
 
@@ -96,15 +96,15 @@ body {
   flex-shrink: none;
 }
 
-.forgot_password_link{
+.forgot_password_link {
   color: rgb(201, 201, 201);
   font-weight: bolder;
   text-decoration: none;
 }
 
-.forgot_password_link:hover{
+.forgot_password_link:hover {
   text-decoration: underline;
-  color:  rgb(201, 201, 201);
+  color: rgb(201, 201, 201);
 }
 
 /* Cards */
@@ -119,7 +119,7 @@ body {
 }
 
 .card-header {
-  background-color: rgba(163,137,113,.8);
+  background-color: rgba(163, 137, 113, 0.8);
   color: white;
 }
 
@@ -155,7 +155,7 @@ body {
 }
 
 #author-link {
-  font-size: larger;
+  font-size: x-large;
   font-family: "Lucida Sans Unicode";
   color: rgb(204, 195, 195);
   text-decoration: underline;
@@ -165,7 +165,7 @@ body {
   border-radius: 15px;
 }
 
-.coffecard-link:hover{
+.coffecard-link:hover {
   color: rgb(211, 201, 201);
 }
 

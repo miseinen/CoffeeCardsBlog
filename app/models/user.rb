@@ -2,6 +2,7 @@ class User < ApplicationRecord
   before_save { self.email = email.downcase }
 
   has_many :coffeecards, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
