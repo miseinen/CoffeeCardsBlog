@@ -112,3 +112,6 @@ en:
       greeting: Hello
       click_url: To reset your password, click the URL below
       if_mistake: If you did not request your password to be reset, just ignore this e-mail and your password will stay the same.
+
+  social_share:
+    greeting: ...with warmth from cozy CoffeeCards Blog.

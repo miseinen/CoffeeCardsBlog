@@ -92,6 +92,9 @@ be:
       click_url: Каб скінуць пароль, націсніце спасылку ніжэй
       if_mistake: Калі вы не прасілі скінуць пароль, проста праігнаруйце гэты ліст, і ваш пароль застанецца ранейшым.
   
+  social_share:
+    greeting: ... з цеплынёй з утульнага CoffeeCards Blog.
+  
   datetime:
     distance_in_words:
       about_x_hours:
