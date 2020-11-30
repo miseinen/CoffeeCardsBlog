@@ -143,8 +143,7 @@ body {
 }
 
 .card-footer {
-  opacity: 0.8;
-  background-color: #42352c;
+  background-color:rgba(66, 53, 44, .8);
   color: rgb(165, 160, 160);
   font-style: italic;
 }
@@ -268,4 +267,38 @@ input[type="radio"]:checked + label {
 
 .page-link:hover {
   color: black;
+}
+
+/* Social share button */
+.social-share-button .ssb-icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+}
+
+.social-share-button .ssb-twitter {
+  background-image: image-url('social-icon/twitter');
+}
+
+.social-share-button .ssb-facebook {
+  background-image: image-url('social-icon/facebook');
+}
+
+.social-share-button .ssb-linkedin {
+  background-image: image-url('social-icon/linkedin');
+}
+
+.social-share-button .ssb-vkontakte {
+  background-image: image-url('social-icon/vk');
+}
+
+.social-share-button .ssb-reddit {
+  background-image: image-url('social-icon/reddit');
+}
+
+.social-share-button .ssb-telegram {
+  background-image: image-url('social-icon/telegram');
 }
