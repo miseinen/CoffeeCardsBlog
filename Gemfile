@@ -27,6 +27,12 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate', '~> 1.0'
 # Internationalize and/or localize
 gem 'rails-i18n', '~> 6.0'
+# Social share
+gem 'social-share-button'
+# JQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+# CoffeeScript adapter
+gem 'coffee-rails', '~> 5.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
