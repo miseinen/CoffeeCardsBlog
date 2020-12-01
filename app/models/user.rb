@@ -5,8 +5,10 @@ class User < ApplicationRecord
   has_many :coffeecards, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  VALID_USERNAME_REGEX = /\A[a-zA-Z0-9]+\z/
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
+                       format: { with: VALID_USERNAME_REGEX },
                        length: 3..25
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -18,7 +20,14 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :about, length: 0..250, allow_blank: true
+  VALID_ABOUT_REGEX = /^[a-zA-Z0-9]+$/
+  validates :about, allow_blank: true,
+                    format: { with: VALID_ABOUT_REGEX, multiline: true },
+                    length: 0..250
+                   
+
+  VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]){8,}\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   def send_password_reset
     generate_token(:reset_password_token)
