@@ -8,8 +8,13 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      session[:user_id] = user.id
-      redirect_to user_path(user)
+      if user.email_confirmed
+        session[:user_id] = user.id
+        redirect_to user_path(user)
+      else
+        flash.now[:alert] = t('registration_confirmation.not_confirmed')
+        render "new"
+      end
     else
       flash.now[:alert] = t('controller.session.alert.incorrect')
       render "new"

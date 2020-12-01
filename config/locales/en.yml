@@ -91,7 +91,7 @@ en:
         delete: CoffeeCard "%{title}" was deleted successfully
     user:
       notice:
-        create: Welcome to CoffeeCards blog, %{username}! You signed up successfully
+        create: Welcome to CoffeeCards blog, %{username}! Your email has been confirmed. Please sign in to continue
         update: Profile was updated successfully
         delete: Account was deleted successfully
     session:
@@ -104,6 +104,13 @@ en:
       reset_expired: Password reset has expired
       not_found: Email not found. Plese check the data you have entered and try again
 
+  registration_confirmation:
+    mail_sent: Please confirm your email address to continue
+    not_confirmed: Please activate your account by following the instructions in the account confirmation email you received to proceed
+    mail:
+      subject: Registration confirmation
+      click_url: Thanks for registering! To confirm your registration click the URL below.
+  
   reset_password:
     edit: Reset password
     recovery: Password recovery

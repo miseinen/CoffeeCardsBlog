@@ -24,9 +24,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
-      flash[:notice] = t('controller.user.notice.create', username: @user.username)
-      redirect_to new_coffeecard_path
+      UserMailer.registration_confirmation(@user).deliver
+      flash[:notice] = t('registration_confirmation.mail_sent')
+      redirect_to root_path
     else
       render "new"
     end
@@ -49,6 +49,15 @@ class UsersController < ApplicationController
       redirect_to login_path
     else
       redirect_to users_path
+    end
+  end
+
+  def confirm_email
+    user = User.find_by_confirm_token(params[:id])
+    if user
+      user.email_activate
+      flash[:notice] = t('controller.user.notice.create', username: user.username)
+      redirect_to login_path
     end
   end
 
