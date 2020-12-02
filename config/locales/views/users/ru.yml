@@ -1,0 +1,15 @@
+ru:
+  form:
+    delete_account_button: Удалить аккаунт
+  user_card:
+    edit_button: Редактировать профиль
+    delete_button: Удалить аккаунт
+    profile_button: Смотреть профиль
+    joined: Вступил(а) в сообщество
+    ago: назад
+  edit:
+    title: Редактировать профиль
+  index:
+    title: Все пользователи
+  new:
+    title: Регистрация

@@ -2,19 +2,19 @@
   <div class="container">
     <div class="card text-center mt-4 mb-4" , id='signup' %>>
       <div class="card-header">
-        <h1 class="text-center mt-4 font-weight-bold" , id="form-title"><%= t("reset_password.edit") %></h1>
+        <h1 class="text-center mt-4 font-weight-bold" , id="form-title"><%= t("new.title_passwords") %></h1>
       </div>
       <div class="card-body">
         <%= form_with(scope: :password, url: passwords_path, :method => :post, local: true) do |f|%>
         <div class="form-group row">
-          <%= f.label t('general.email'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('email_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.email_field :email, class: "form-control signup-field", 
-            placeholder: t('general.enter_email') %>
+            placeholder: t('email_placeholder') %>
           </div>
         </div>
         <p class="text-center">
-          <%= f.submit t('general.button.submit'), class: "btn btn-secondary font-weight-bold" %>
+          <%= f.submit t('submit_button'), class: "btn btn-secondary font-weight-bold" %>
         </p>
         <% end %>
       </div>

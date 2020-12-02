@@ -1,0 +1,9 @@
+en:
+  coffeecard:
+    show_button: Show
+    edit_button: Edit
+    delete_button: Delete
+    updated_at: Updated
+    created_at: Created
+    ago: ago
+    social_share_greeting: ...with warmth from cozy CoffeeCards Blog.

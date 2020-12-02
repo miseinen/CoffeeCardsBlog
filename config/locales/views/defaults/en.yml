@@ -1,0 +1,14 @@
+en:
+  username_label: Username
+  username_placeholder: Enter your username
+  about_label: About
+  about_placeholder: A few words about you
+  email_label: Email
+  email_placeholder: Enter your email
+  password_label: Password
+  password_placeholder: Enter your password
+  confirmation_label: Password confirmation
+  confirmation_placeholder: Confirm password
+  submit_button: Submit
+  data_confirm: Are you sure?
+  

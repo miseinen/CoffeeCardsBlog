@@ -1,0 +1,17 @@
+ru:
+  form:
+    title_label: Тема для размышления
+    title_placeholder: Заголовок
+    text_lang_label: Выберите язык текста
+    description_label: Посетившие мысли
+    description_lang_placeholder: Пару строк о мечтах и вдохновении
+    submit_button: Отправить
+  navbar:
+    all_coffeecards: Русские CoffeeCards
+    all_users: Все пользователи
+    new_coffeecard: +Новая CoffeeCard
+    my_profile: Мой профиль
+    admin: Админ
+    logout: Выйти
+    login: Войти
+    signup: Регистрация

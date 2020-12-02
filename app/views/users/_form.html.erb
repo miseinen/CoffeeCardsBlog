@@ -10,48 +10,48 @@
         <%= form_with(model: @user, local: true) do |f| %>
 
         <div class="form-group row">
-          <%= f.label t('user.username'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('username_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.text_field :username, class: "form-control signup-field",
-             placeholder: t('user.enter_username'), maxlength: get_maxlength(User, :username) %>
+             placeholder: t('username_placeholder'), maxlength: get_maxlength(User, :username) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('user.about'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('about_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.text_area :about, class: "form-control signup-field", rows: "3",
-             placeholder: t('user.enter_about'), maxlength: get_maxlength(User, :about) %>
+             placeholder: t('about_placeholder'), maxlength: get_maxlength(User, :about) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('general.email'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('email_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.email_field :email, class: "form-control signup-field",
-             placeholder: t('general.enter_email'), maxlength: get_maxlength(User, :email) %>
+             placeholder: t('email_placeholder'), maxlength: get_maxlength(User, :email) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('general.password'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('password_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
-            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('general.enter_password') %>
+            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('password_placeholder') %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('user.password_confirmation'), class: "col-2 col-form-label signup-label" %>
+          <%= f.label t('confirmation_label'), class: "col-2 col-form-label signup-label" %>
           <div class="col-10">
             <%= f.password_field :password_confirmation, class: "form-control signup-field",
-             placeholder: t('user.enter_password_confirmation') %>
+             placeholder: t('confirmation_placeholder') %>
           </div>
         </div>
 
         <p class="text-center">
-          <%= f.submit t('general.button.submit'), class: "btn btn-secondary font-weight-bold" %>
+          <%= f.submit t('submit_button'), class: "btn btn-secondary font-weight-bold" %>
           <% if edit %>
-          <%= link_to t('user.delete_profile'), user_path(@user), method: :delete, data: { confirm: t('general.you_sure?') },
+          <%= link_to t('form.delete_account_button'), user_path(@user), method: :delete, data: { confirm: t('data_confirm') },
           class: "btn btn-outline-danger" %>
           <% end %>
         </p>

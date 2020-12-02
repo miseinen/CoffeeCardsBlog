@@ -1,0 +1,23 @@
+en:
+  application:
+    must_be_logged_in: You must be logged in
+  coffeecards:
+    create_success: CoffeeCard "%{title}" was created successfully
+    update_success: CoffeeCard "%{title}" was updated successfully
+    destroy_success: CoffeeCard "%{title}" was deleted successfully
+  passwords:
+    recovery_mail_sent: Email sent with password reset instructions
+    user_not_found: Email not found. Plese check the data you have entered and try again
+    reset_expired: Password reset has expired
+  sessions:
+    registration_not_confirmed: Please activate your account by following the instructions in the account confirmation email you received to proceed
+    incorrect_data: Email or password is incorrect
+    logout: Logged out
+  users:
+    confirmation_mail_sent:
+    update_success: Profile was updated successfully
+    delete_success: Account was deleted successfully
+    create_success: Welcome to CoffeeCards blog, %{username}! Your email has been confirmed. Please sign in to continue
+  user_mailer:
+    registration_confirmation_subject: Registration confirmation
+    forgot_password_subject: Password recovery

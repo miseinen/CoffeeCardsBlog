@@ -1,0 +1,9 @@
+ru:
+  coffeecard:
+    show_button: Показать
+    edit_button: Отредактировать
+    delete_button: Удалить
+    updated_at: Обновлено
+    created_at: Создано
+    ago: назад
+    social_share_greeting: ... с теплотой из уютного CoffeeCards Blog.

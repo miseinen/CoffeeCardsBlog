@@ -1,0 +1,31 @@
+ru:
+  activerecord:
+    models:
+      user: 
+        one: Пользователь
+        other: Пользователи
+      coffeecard:
+        one: Coffeecard
+        other: Coffeecards
+      like:
+        one: Coffeelike
+        other: Coffeelikes
+    attributes:
+      user:
+        username:
+          one: Псевдоним
+          other: Псевдонимы
+        about: О себе
+        email:
+          one: Email
+          other: Emails
+        password:
+          one: Пароль
+          other: Пароли
+      coffeecard:
+        title: 
+          one: Заголовок
+          other: Заголовки
+        description:
+          one: Описание
+          other: Описания

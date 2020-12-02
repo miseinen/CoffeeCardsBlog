@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :coffeecards, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  I18n.t :username, :about, :password
+
   VALID_USERNAME_REGEX = /\A[a-zA-Z0-9]+\z/
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },

@@ -15,10 +15,10 @@
           </div>
         </li>
         <li class="nav-item active">
-          <%= link_to t('general.all_coffeecards'), coffeecards_path, class: "nav-link" %>
+          <%= link_to t('navbar.all_coffeecards'), coffeecards_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to t('general.all_users'), users_path, class: "nav-link" %>
+          <%= link_to t('navbar.all_users'), users_path, class: "nav-link" %>
         </li>
 
         <% if logged_in? %>
@@ -28,7 +28,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to "#{t('navbar.my_profile')}"+"#{t('navbar.admin_role') if current_user.admin?}"+"(#{current_user.username})",
+          <%= link_to "#{t('navbar.my_profile')}"+"#{t('navbar.admin') if current_user.admin?}"+"(#{current_user.username})",
            user_path(I18n.locale, current_user), class: "nav-link" %>
         </li>
         <li class="nav-item active">
@@ -39,7 +39,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item active">
-          <%= link_to t('general.login'), login_path, class: "nav-link" %>
+          <%= link_to t('navbar.login'), login_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to t('navbar.signup'), signup_path, class: "nav-link" %>

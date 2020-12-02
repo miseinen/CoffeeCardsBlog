@@ -1,0 +1,11 @@
+en:
+  forgot_password:
+    greeting: Hello
+    text_click_url: To reset your password, click the URL below
+    reset_password_button: Reset password
+    if_mistake: If you did not request your password to be reset, just ignore this e-mail and your password will stay the same.
+  registration_confirmation:
+    greeting: Hello
+    text_click_url: Thanks for registering! To confirm your registration click the URL below.
+    confirmation_button: Confirm registration
+  

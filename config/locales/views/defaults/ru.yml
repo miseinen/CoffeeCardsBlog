@@ -1,0 +1,13 @@
+ru:
+  username_label: Псевдоним
+  username_placeholder: Введите свой псевдоним
+  about_label: О себе
+  about_placeholder: Пару слов о себе
+  email_label: Email
+  email_placeholder: Введите свой электронный ящик
+  password_label: Пароль
+  password_placeholder: Введите пароль
+  confirmation_label: Подтверждение пароля
+  confirmation_placeholder: Подтвердите пароль
+  submit_button: Отправить
+  data_confirm: Вы уверены?

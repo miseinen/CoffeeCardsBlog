@@ -1,0 +1,10 @@
+be:
+  forgot_password:
+    greeting: Прывiтанне
+    text_click_url: Каб скінуць пароль, націсніце спасылку ніжэй
+    reset_password_button: Скід пароля
+    if_mistake: Калі вы не прасілі скінуць пароль, проста праігнаруйце гэты ліст, і ваш пароль застанецца ранейшым.
+  registration_confirmation:
+    greeting: Прывiтанне
+    text_click_url:  Дзякуй за рэгістрацыю! Каб пацвердзіць рэгістрацыю, націсніце спасылку ніжэй.
+    confirmation_button: Пацвердзiць рэгістрацыю

@@ -10,15 +10,15 @@
         <%= form_with(model: @coffeecard, local: true) do |f| %>
 
         <div class="form-group row">
-          <%= f.label t('coffeecard.form.coffee_theme'), class: "col-2 col-form-label text-right" %>
+          <%= f.label t('form.title_label'), class: "col-2 col-form-label text-right" %>
           <div class="col-10">
-            <%= f.text_field :title, class: "form-control", placeholder: t('coffeecard.form.enter_title'),
+            <%= f.text_field :title, class: "form-control", placeholder: t('form.title_placeholder'),
              maxlength: get_maxlength(Coffeecard, :title) %>
           </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('coffeecard.form.text_lang'), class: "col-2 col-form-label text-right" %>
+          <%= f.label t('form.text_lang_label'), class: "col-2 col-form-label text-right" %>
           <div class="col-10">
             <% I18n.available_locales.each do |a| %>
             <div class="form-check form-check-inline pt-1">
@@ -30,14 +30,14 @@
         </div>
 
         <div class="form-group row">
-          <%= f.label t('coffeecard.form.thoughts'), class: "col-2 col-form-label text-right" %>
+          <%= f.label t('form.description_label'), class: "col-2 col-form-label text-right" %>
           <div class="col-10">
             <%= f.text_area :description, class: "form-control", id: "exampleFormControlTextarea1", rows:"7",
-             placeholder: t('coffeecard.form.enter_thoughts'), maxlength: get_maxlength(Coffeecard, :description)  %>
+             placeholder: t('form.description_lang_placeholder'), maxlength: get_maxlength(Coffeecard, :description)  %>
           </div>
         </div>
 
-        <p class="text-center"><%= f.submit t('general.button.submit'), class: "btn btn-secondary font-weight-bold" %></p>
+        <p class="text-center"><%= f.submit t('submit_button'), class: "btn btn-secondary font-weight-bold" %></p>
         <% end %>
       </div>
     </div>

@@ -1,0 +1,23 @@
+ru:
+  application:
+    must_be_logged_in: Вы должны войти в аккаунт
+  coffeecards:
+    create_success: CoffeeCard "%{title}" успешно создана
+    update_success: CoffeeCard "%{title}" успешно обновлена
+    destroy_success: CoffeeCard "%{title}" удалена
+  passwords:
+    recovery_mail_sent: Инструкции по восстановлению пароля высланы на email
+    user_not_found: Email не найден, проверьте введенные даннные и попробуйте снова
+    reset_expired: Срок действия сброса пароля истек
+  sessions:
+    registration_not_confirmed: Пожалуйста, активируйте свою учетную запись, следуя инструкциям в электронном письме с подтверждением учетной записи, которое вы получили, чтобы продолжить регистрацию
+    incorrect_data: Почта или пароль не действительны
+    logout: Вы вышли из аккаунта
+  users:
+    confirmation_mail_sent: Пожалуйста, подтвердите свой адрес электронной почты, чтобы продолжить регистрацию
+    update_success: Профиль успешно обновлен
+    delete_success: Аккаунт успешно удален
+    create_success: Добро пожаловать в CoffeeCards блог, %{username}! Ваш электронный адрес подтвержден. Пожалуйста, войдите, чтобы продолжить
+  user_mailer:
+    registration_confirmation_subject: Подтверждение регистрации
+    forgot_password_subject: Восстановление пароля

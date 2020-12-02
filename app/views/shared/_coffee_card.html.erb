@@ -30,18 +30,18 @@
         </div>
         <% if logged_in? && (current_user.admin? || coffeecard.user == current_user) && !show %>
         <div class="text-left offset-3">
-          <%= link_to  t('general.button.show'), coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  t('general.button.edit'), edit_coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
-          <%= link_to  t('general.button.delete'), coffeecard_path(coffeecard), method: :delete,
-           data: {confirm: t('general.you_sure?')}, class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('coffeecard.show_button'), coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('coffeecard.edit_button'), edit_coffeecard_path(coffeecard), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to  t('coffeecard.delete_button'), coffeecard_path(coffeecard), method: :delete,
+           data: {confirm: t('data_confirm?')}, class: "btn btn-outline-light btn-sm" %>
         </div>
         <% end %>
       </div>
       <div class="card-footer">
-        <%= t 'general.updated' %> <%= time_ago_in_words coffeecard.updated_at %> <%= t 'general.ago' %>.
-        <%= t 'general.created' %> <%= time_ago_in_words coffeecard.created_at %> <%= t 'general.ago' %>.
+        <%= t 'coffeecard.updated_at' %> <%= time_ago_in_words coffeecard.updated_at %> <%= t 'coffeecard.ago' %>.
+        <%= t 'coffeecard.created_at' %> <%= time_ago_in_words coffeecard.created_at %> <%= t 'coffeecard.ago' %>.
         <div class="pt-2">
-          <%= social_share_button_tag(t("social_share.greeting"), :url => coffeecard_url(coffeecard),
+          <%= social_share_button_tag(t("coffeecard.social_share_greeting"), :url => coffeecard_url(coffeecard),
          desc: coffeecard.description) %>
         </div>
       </div>

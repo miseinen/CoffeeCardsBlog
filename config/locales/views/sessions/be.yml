@@ -1,0 +1,5 @@
+be:
+  form:
+    reset_password_button: Забыліся на пароль?
+  new:
+    title_sessions: Увайсці

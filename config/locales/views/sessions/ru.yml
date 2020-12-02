@@ -1,0 +1,5 @@
+ru:
+  form:
+    reset_password_button: Забыли свой пароль?
+  new:
+    title_sessions: Войти

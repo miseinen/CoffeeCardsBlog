@@ -1,0 +1,15 @@
+en:
+  form:
+    delete_account_button: Delete account
+  user_card:
+    edit_button: Edit profile
+    delete_button: Delete account
+    profile_button: See profile
+    joined: Joined
+    ago: ago
+  edit:
+    title: Edit profile
+  index:
+    title: All Users
+  new:
+    title: Sign Up

@@ -1,0 +1,9 @@
+be:
+  coffeecard:
+    show_button: Паказаць
+    edit_button: Адрэдагаваць
+    delete_button: Выдаліць
+    updated_at: Абноўлена
+    created_at: Створана
+    ago: назад
+    social_share_greeting: ... з цеплынёй з утульнага CoffeeCards Blog.

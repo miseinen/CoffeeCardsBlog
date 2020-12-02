@@ -1,12 +1,12 @@
 <div class="card-body">
   <div class="card-header">
-    <p class="card-title"><%= t('reset_password.mail.greeting') %>, <%= @user.username %></p>
+    <p class="card-title"><%= t('registration_confirmation.greeting') %>, <%= @user.username %></p>
   </div>
   <div class="card-text">
-    <p><%= t('registration_confirmation.mail.click_url') %>:</p>
+    <p><%= t('registration_confirmation.text_click_url') %>:</p>
 
     <p><a href=<%= confirm_email_user_url(I18n.locale, @user.confirm_token) %> class="button">
-        <%= t('registration_confirmation.mail.subject') %></a></p>
+        <%= t('registration_confirmation.confirmation_button') %></a></p>
   </div>
   <div class="card-footer">
     <p></p>

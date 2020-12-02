@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+      coffeecard:
+        one: Coffeecard
+        other: Coffeecards
+      like:
+        one: Coffeelike
+        other: Coffeelikes
+    attributes:
+      user:
+        username:
+          one: Username
+          other: Usernames
+        about: About
+        email:
+          one: Email
+          other: Emails
+        password:
+          one: Password
+          other: Passwords
+      coffeecard:
+        title: 
+          one: Title
+          other: Titles
+        description:
+          one: Description
+          other: Descriptions

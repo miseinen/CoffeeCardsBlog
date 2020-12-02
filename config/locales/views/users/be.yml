@@ -1,0 +1,15 @@
+be:
+  form:
+    delete_account_button: Выдаліць акаўнт
+  user_card:
+    edit_button: Рэдагаваць профіль
+    delete_button: Выдаліць акаўнт
+    profile_button: Глядзець профіль
+    joined: Далучыўся(далучылася) да супольнасцi
+    ago: назад
+  edit:
+    title_users: Рэдагаваць профіль
+  index:
+    title_users: Усе карыстальнікі
+  new:
+    title_users: Рэгістрацыя

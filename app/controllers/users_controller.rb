@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.registration_confirmation(@user).deliver
-      flash[:notice] = t('registration_confirmation.mail_sent')
+      flash[:notice] = t('users.confirmation_mail_sent')
       redirect_to root_path
     else
       render "new"
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = t('controller.user.notice.update')
+      flash[:notice] = t('users.update_success')
       redirect_to @user
     else
       render "edit"
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    flash[:notice] = t('controller.user.notice.delete')
+    flash[:notice] = t('users.delete_success')
     if @user == current_user
       session[:user_id] = nil
       redirect_to login_path
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     user = User.find_by_confirm_token(params[:id])
     if user
       user.email_activate
-      flash[:notice] = t('controller.user.notice.create', username: user.username)
+      flash[:notice] = t('users.create_success', username: user.username)
       redirect_to login_path
     end
   end

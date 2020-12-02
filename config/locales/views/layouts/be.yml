@@ -1,0 +1,17 @@
+be:
+  form:
+    title_label: Тэма для разважання
+    title_placeholder: Загаловак
+    text_lang_label: Абярыце мову тэксту
+    description_label: Думкі, якія наведалі
+    description_lang_placeholder: Пару радкоў аб марах і натхненні
+    submit_button: Адправіць
+  navbar:
+    all_coffeecards: Беларускiя CoffeeCards
+    all_users: Усе карыстальнікі
+    new_coffeecard: +Новая CoffeeCard
+    my_profile: Мой профіль
+    admin: Адмін
+    logout: Выйсці
+    login: Увайсці
+    signup: Рэгістрацыя

@@ -1,0 +1,18 @@
+en:
+  form:
+    title_label: Coffee Theme
+    title_placeholder: Enter title
+    text_lang_label: Select the language of the text
+    description_label: Visited thoughts
+    description_lang_placeholder: A few lines about inspiration
+    submit_button: Submit
+  navbar:
+    all_coffeecards: English CoffeeCards
+    all_users: All Users
+    new_coffeecard: +New CoffeeCard
+    my_profile: My profile
+    admin: Admin
+    logout: Logout
+    login: Login
+    signup: Sign Up
+  

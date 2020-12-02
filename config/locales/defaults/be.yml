@@ -1,0 +1,62 @@
+be:
+  language_name: Беларуская
+  
+  datetime:
+      distance_in_words:
+        about_x_hours:
+          one: каля 1 гадзіны
+          other: каля %{count} гадзін
+        about_x_months:
+          one: каля 1 месяца
+          other: около %{count} месяцаў
+        about_x_years:
+          one: каля 1 года
+          other: около %{count} гадоў
+        almost_x_years:
+          one: амаль 1 год
+          two: амаль 2 года
+          three: амаль 3 года
+          four: амаль 4 года
+          other: амаль %{count} гадоў
+        half_a_minute: паўхвіліны
+        less_than_x_minutes:
+          zero: менш хвіліны
+          one: менш хвіліны
+          other: менш %{count} хвілін
+        less_than_x_seconds:
+          zero: менш секунды
+          one: менш секунды
+          other: менш %{count} секунд
+        over_x_years:
+          one: больш за год
+          other: больш за %{count} гадоў
+        x_days:
+          one: 1 гадзіна
+          two: 2 гадзіны
+          three: 3 гадзіны
+          four: 4 гадзіны
+          other: "%{count} гадзін"
+        x_minutes:
+          one: 1 хвіліна
+          two: 2 хвіліны
+          three: 3 хвіліны
+          four: 4 хвіліны
+          other: "%{count} хвілін"
+        x_months:
+          one: 1 месяц
+          two: 2 месяцы
+          three: 3 месяцы
+          four: 4 месяцы
+          other: "%{count} месяцаў"
+        x_years:
+          one: 1 год
+          two: 2 гады
+          three: 3 гады
+          four: 4 гады
+          other: "%{count} гадоў"
+        x_seconds:
+          one: 1 секунда
+          two: 2 секунды
+          three: 3 секунды
+          four: 4 секунды
+          other: "%{count} секунд"

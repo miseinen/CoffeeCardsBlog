@@ -9,13 +9,13 @@
         <div class="col">
           <%= image_tag "avatar.jpg", size: "200x200", alt: user.username, class: "avatar" %>
           <div class="card-body text-center font-italic">
-            <%= link_to pluralize(user.coffeecards.count, "CoffeCard"), user_path(user, anchor: "users-coffeecards"),
+            <%= link_to pluralize(user.coffeecards.count, "CoffeeCard"), user_path(user, anchor: "users-coffeecards"),
              class: "signup-label coffecard-link" %>
           </div>
           <% if logged_in? && user == current_user %>
-          <%= link_to t('user.user_card.edit'), edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
+          <%= link_to t('user_card.edit_button'), edit_user_path(current_user), class: "btn btn-outline-light btn-sm" %>
           <% if current_user.admin? %>
-          <%= link_to t('user.user_card.delete'), user_path(user), method: :delete, data: { confirm: "Are you sure?" },
+          <%= link_to t('user_card.delete_button'), user_path(user), method: :delete, data: { confirm: t('data_confirm') },
           class: "btn btn-outline-light btn-sm" %>
           <% end %>
           <% end %>
@@ -24,18 +24,18 @@
         <% if list || user.about %>
         <div class="col mr-5">
           <div class=" main-text">
-            <p class="text-center lead font-italic"><%= t('user.about') %></p>
+            <p class="text-center lead font-italic"><%= t('about_label') %></p>
             <p class="text-center lead pb-3 pr-1 pl-1"><%= user.about %></p>
             <% if list %>
             <p class="text-bottom pb-3">
-              <%= link_to t('user.user_card.profile'), user_path(user), class: "btn btn-outline-light" %></p>
+              <%= link_to t('user_card.profile_button'), user_path(user), class: "btn btn-outline-light" %></p>
             <% end %>
           </div>
         </div>
         <% end %>
       </div>
       <div class="card-footer">
-        <%= t('user.user_card.joined') %> <%= time_ago_in_words user.created_at %> <%= t('general.ago') %>.
+        <%= t('user_card.joined') %> <%= time_ago_in_words user.created_at %> <%= t('user_card.ago') %>.
       </div>
     </div>
   </div>

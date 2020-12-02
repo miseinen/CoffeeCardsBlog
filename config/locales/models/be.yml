@@ -1,0 +1,31 @@
+be:
+  activerecord:
+    models:
+      user: 
+        one: Карыстальнік
+        other: Карыстальнікі
+      coffeecard:
+        one: Coffeecard
+        other: Coffeecards
+      like:
+        one: Coffeelike
+        other: Coffeelikes
+    attributes:
+      user:
+        username:
+          one: Псеўданім
+          other: Псеўданімы
+        about: Пра сябе
+        email:
+          one: Email
+          other: Emails
+        password:
+          one: Пароль
+          other: Паролi
+      coffeecard:
+        title: 
+          one: Загаловак
+          other: Загалоўкi
+        description:
+          one: Апісанне
+          other: Апісаннi

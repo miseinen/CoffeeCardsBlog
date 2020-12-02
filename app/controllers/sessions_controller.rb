@@ -12,18 +12,18 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to user_path(user)
       else
-        flash.now[:alert] = t('registration_confirmation.not_confirmed')
+        flash.now[:alert] = t('sessions.registration_not_confirmed')
         render "new"
       end
     else
-      flash.now[:alert] = t('controller.session.alert.incorrect')
+      flash.now[:alert] = t('sessions.incorrect_data')
       render "new"
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = t('controller.session.notice.logout')
+    flash[:notice] = t('sessions.logout')
     redirect_to root_path
   end
 end
