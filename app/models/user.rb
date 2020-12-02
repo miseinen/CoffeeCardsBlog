@@ -10,7 +10,7 @@ class User < ApplicationRecord
   VALID_USERNAME_REGEX = /\A[a-zA-Z0-9а-яА-ЯўІі]+\z/
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
-                       format: { with: VALID_USERNAME_REGEX },
+                       format: { with: VALID_USERNAME_REGEX, message: :bad_username },
                        length: 3..25
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -26,7 +26,7 @@ class User < ApplicationRecord
                     length: 0..250
 
   VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]).{8,}\z/i
-  validates :password, format: { with: VALID_PASSWORD_REGEX }
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: :bad_password }
 
   def send_password_reset
     generate_token(:reset_password_token)

@@ -29,3 +29,11 @@ en:
         description:
           one: Description
           other: Descriptions
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              bad_username: must contain only latin or cyrillic alphabet with/or digits
+            password:
+              bad_password: must contain at least 8 characters, one latin letter, special symbol(@#$%^&+=) and digit

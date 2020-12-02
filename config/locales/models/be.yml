@@ -29,3 +29,11 @@ be:
         description:
           one: Апісанне
           other: Апісаннi
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              bad_username: павінен змяшчаць толькі лацінскі ці кірылічны алфавіт і/або лічбы
+            password:
+              bad_password: павінен змяшчаць не менш за 8 сімвалаў, адну лацінскую літару, спецыяльны сімвал (@\#$%^&+=) і лічбу
