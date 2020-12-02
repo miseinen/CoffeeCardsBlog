@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.delivery_method = :smtp
-host = 'https://gentle-ocean-37855.herokuapp.com/' #replace with your own url
+host = 'https://coffeecardsblog.herokuapp.com/' #replace with your own url
 config.action_mailer.default_url_options = { host: host }
 
 # SMTP settings for gmail
