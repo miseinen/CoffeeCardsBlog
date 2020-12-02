@@ -96,6 +96,16 @@ body {
   flex-shrink: none;
 }
 
+.footer-link{
+  font-size: small;
+  color: #8a8a8a;
+}
+
+.footer-link:hover{
+  color: white;
+  text-decoration: underline;
+}
+
 .forgot_password_link {
   color: rgb(201, 201, 201);
   font-weight: bolder;
