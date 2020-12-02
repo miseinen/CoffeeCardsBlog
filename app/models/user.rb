@@ -28,7 +28,7 @@ class User < ApplicationRecord
                     length: 0..250
                    
 
-  VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]){8,}\z/i
+  VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]).{8,}\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   def send_password_reset

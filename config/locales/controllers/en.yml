@@ -14,7 +14,7 @@ en:
     incorrect_data: Email or password is incorrect
     logout: Logged out
   users:
-    confirmation_mail_sent:
+    confirmation_mail_sent: Please confirm your email address to continue
     update_success: Profile was updated successfully
     delete_success: Account was deleted successfully
     create_success: Welcome to CoffeeCards blog, %{username}! Your email has been confirmed. Please sign in to continue

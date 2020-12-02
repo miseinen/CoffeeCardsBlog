@@ -57,6 +57,7 @@ class UsersController < ApplicationController
     if user
       user.email_activate
       flash[:notice] = t('users.create_success', username: user.username)
+      session[:user_id] = nil
       redirect_to login_path
     end
   end
