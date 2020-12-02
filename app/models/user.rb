@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   I18n.t :username, :about, :password
 
-  VALID_USERNAME_REGEX = /\A[a-zA-Z0-9]+\z/
+  VALID_USERNAME_REGEX = /\A[a-zA-Z0-9а-яА-ЯўІі]+\z/
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
                        format: { with: VALID_USERNAME_REGEX },
@@ -22,11 +22,8 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  VALID_ABOUT_REGEX = /^[a-zA-Z0-9]+$/
   validates :about, allow_blank: true,
-                    format: { with: VALID_ABOUT_REGEX, multiline: true },
                     length: 0..250
-                   
 
   VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]).{8,}\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }

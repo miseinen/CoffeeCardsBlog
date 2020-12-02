@@ -8,8 +8,8 @@ en:
     joined: Joined
     ago: ago
   edit:
-    title: Edit profile
+    title_users: Edit profile
   index:
-    title: All Users
+    title_users: All Users
   new:
-    title: Sign Up
+    title_users: Sign Up

@@ -8,8 +8,8 @@ ru:
     joined: Вступил(а) в сообщество
     ago: назад
   edit:
-    title: Редактировать профиль
+    title_users: Редактировать профиль
   index:
-    title: Все пользователи
+    title_users: Все пользователи
   new:
-    title: Регистрация
+    title_users: Регистрация
