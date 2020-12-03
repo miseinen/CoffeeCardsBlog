@@ -37,7 +37,7 @@ ru:
         four: 4 часа
         other: "%{count} часов"
       x_minutes:
-        one: 1 минута
+        one: 1 минуту
         two: 2 минуты
         three: 3 минуты
         four: 4 минуты
@@ -55,7 +55,7 @@ ru:
         four: 4 года
         other: "%{count} лет"
       x_seconds:
-        one: 1 секунда
+        one: 1 секунду
         two: 2 секунды
         three: 3 секунды
         four: 4 секунды

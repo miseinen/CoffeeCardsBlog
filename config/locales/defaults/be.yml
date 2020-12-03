@@ -31,13 +31,13 @@ be:
           one: больш за год
           other: больш за %{count} гадоў
         x_days:
-          one: 1 гадзіна
+          one: 1 гадзіну
           two: 2 гадзіны
           three: 3 гадзіны
           four: 4 гадзіны
           other: "%{count} гадзін"
         x_minutes:
-          one: 1 хвіліна
+          one: 1 хвіліну
           two: 2 хвіліны
           three: 3 хвіліны
           four: 4 хвіліны
@@ -55,7 +55,7 @@ be:
           four: 4 гады
           other: "%{count} гадоў"
         x_seconds:
-          one: 1 секунда
+          one: 1 секунду
           two: 2 секунды
           three: 3 секунды
           four: 4 секунды
