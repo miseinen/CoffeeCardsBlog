@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   PER_PAGE = 2
 
   def index
-    @users = User.paginate(page: params[:page], per_page: PER_PAGE).order("created_at DESC")
+    @users = User.paginate(page: params[:page], per_page: PER_PAGE).where(email_confirmed: true).order("created_at DESC")
   end
 
   def new
