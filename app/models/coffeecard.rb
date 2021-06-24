@@ -2,7 +2,8 @@ class Coffeecard < ApplicationRecord
     belongs_to :user
     has_many :likes, dependent: :destroy
 
-    I18n.t :title, :description
+    I18n.t(:title)
+    I18n.t(:description)
 
     validates :title, presence: true,
                       length: 1..50
