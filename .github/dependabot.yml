@@ -1,0 +1,35 @@
+version: 2
+updates:
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 3
+    pull-request-branch-name:
+      separator: "-"
+    # Disable rebasing for pull requests
+    rebase-strategy: "disabled"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 3
+    pull-request-branch-name:
+      separator: "-"
+    # Disable rebasing for pull requests
+    rebase-strategy: "disabled"
+
+  # Maintain dependencies for Bundler
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 3
+    pull-request-branch-name:
+      separator: "-"
+    # Disable rebasing for pull requests
+    rebase-strategy: "disabled"
