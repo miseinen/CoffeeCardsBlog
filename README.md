@@ -10,7 +10,6 @@ Enjoy this cozy blog.
 * choose a language of interface and "coffee cards" (English, Russian, Belarusian)
 * have a personal profile
 * write a few rows about his/her thoughts on "coffee card"
-* share "coffee cards" with other users and with other social networks
 * edit or delete his/her "coffee card"
 * edit or delete his/her profile
 * see others "coffee cards" and profiles
@@ -26,8 +25,7 @@ Enjoy this cozy blog.
 * **will_paginate** for pagination
 * **bootstrap-will_paginate** for styling pagination
 * **rails-i18n** for localization
-* **social-share-button** to make "coffee cards" shareable
 
 ## Deployment
 **Heroku** was used for deployment. 
-Welcome to [CoffeeCards Blog](https://coffeecardsblog.herokuapp.com/)
+Welcome to [**CoffeeCards Blog**](https://coffeecardsblog.herokuapp.com/)
