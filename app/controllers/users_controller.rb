@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   end
 
   def confirm_email
-    user = User.find_by!(params[:id])
+    user = User.find(id: params[:id])
     return unless user
 
     user.email_activate
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find(id: params[:id])
     end
 
     def require_same_user
