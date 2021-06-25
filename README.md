@@ -1,4 +1,6 @@
 # CoffeeCards Blog:coffee:
+[![Brakeman Scan](https://github.com/miseinen/coffee-cards-blog/actions/workflows/brakeman-analysis.yml/badge.svg)](https://github.com/miseinen/coffee-cards-blog/actions/workflows/brakeman-analysis.yml)
+<br/>
 This app is a result of Ruby on Rails study with the help of a few sections of Udemy Course [The Complete Ruby on Rails Developer Course](https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/) and a large number of helpful articles from the Internet.
 
 It is a simple **desktop** web application like a blog.<br> 
