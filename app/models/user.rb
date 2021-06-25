@@ -9,13 +9,14 @@ class User < ApplicationRecord
   I18n.t(:about)
   I18n.t(:password)
 
-  VALID_USERNAME_REGEX = /\A[a-zA-Z0-9а-яА-ЯўІі]+\z/
+  VALID_USERNAME_REGEX = /\A[a-zA-Z0-9а-яА-ЯўІі]+\z/.freeze
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
-                       format: { with: VALID_USERNAME_REGEX, message: :bad_username },
+                       format: { with: VALID_USERNAME_REGEX,
+                                 message: :bad_username },
                        length: 3..25
 
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
                     format: { with: VALID_EMAIL_REGEX },
@@ -27,8 +28,9 @@ class User < ApplicationRecord
   validates :about, allow_blank: true,
                     length: 0..250
 
-  VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]).{8,}\z/i
-  validates :password, format: { with: VALID_PASSWORD_REGEX, message: :bad_password, if: Proc.new { |user| user.password.present? } }
+  VALID_PASSWORD_REGEX = /\A(?=.*\d)(?=.*([a-z]))(?=.*[@#$%^&+=]).{8,}\z/i.freeze
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: :bad_password,
+                                 if: proc { |user| user.password.present? } }
 
   def send_password_reset
     generate_token(:reset_password_token)
@@ -38,9 +40,10 @@ class User < ApplicationRecord
   end
 
   def generate_token(column)
-    begin
+    loop do
       self[column] = SecureRandom.urlsafe_base64
-    end while User.exists?(column => self[column])
+      break if User.exists?(column => self[column])
+    end
   end
 
   def email_activate
@@ -51,9 +54,9 @@ class User < ApplicationRecord
 
   private
 
-  def confirmation_token
-    if self.confirm_token.blank?
+    def confirmation_token
+      return if confirm_token.blank?
+
       self.confirm_token = SecureRandom.urlsafe_base64.to_s
     end
-  end
 end
