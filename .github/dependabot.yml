@@ -4,7 +4,6 @@ updates:
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
-    insecure-external-code-execution: deny
     schedule:
       interval: "daily"
     open-pull-requests-limit: 3
@@ -16,7 +15,6 @@ updates:
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
-    insecure-external-code-execution: deny
     schedule:
       interval: "daily"
     open-pull-requests-limit: 3
@@ -28,7 +26,6 @@ updates:
   # Maintain dependencies for Bundler
   - package-ecosystem: "bundler"
     directory: "/"
-    insecure-external-code-execution: deny
     schedule:
       interval: "daily"
     open-pull-requests-limit: 3
