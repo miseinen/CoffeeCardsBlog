@@ -6,7 +6,7 @@ updates:
     directory: "/"
     insecure-external-code-execution: deny
     schedule:
-      interval: "weekly"
+      interval: "daily"
     open-pull-requests-limit: 3
     pull-request-branch-name:
       separator: "-"
@@ -18,7 +18,7 @@ updates:
     directory: "/"
     insecure-external-code-execution: deny
     schedule:
-      interval: "weekly"
+      interval: "daily"
     open-pull-requests-limit: 3
     pull-request-branch-name:
       separator: "-"
@@ -30,7 +30,7 @@ updates:
     directory: "/"
     insecure-external-code-execution: deny
     schedule:
-      interval: "weekly"
+      interval: "daily"
     open-pull-requests-limit: 3
     pull-request-branch-name:
       separator: "-"
