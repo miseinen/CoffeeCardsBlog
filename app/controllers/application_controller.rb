@@ -13,16 +13,16 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    if !logged_in?
-      flash[:alert] = t('application.must_be_logged_in')
-      redirect_to login_path
-    end
+    return if logged_in?\
+
+    flash[:alert] = t('application.must_be_logged_in')
+    redirect_to login_path
   end
 
   def require_same_user
-    if current_user != @coffeecard.user && !current_user.admin?
-      redirect_to @coffeecard 
-    end
+    return unless current_user != @coffeecard.user && !current_user.admin?
+
+    redirect_to @coffeecard
   end
 
   def switch_locale(&action)

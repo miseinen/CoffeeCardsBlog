@@ -40,7 +40,7 @@ Layout/IndentationConsistency:
   EnforcedStyle: 'indented_internal_methods'
 
 Layout/LineLength:
-  Max: 80
+  Max: 85
 
 Metrics/BlockLength:
   Exclude:

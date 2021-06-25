@@ -1,25 +1,23 @@
 class PasswordsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
-    user = User.find_by_email(params[:password][:email])
+    user = User.find_by!(params[:password][:email])
     if user
-      user.send_password_reset 
+      user.send_password_reset
       flash[:notice] = t('passwords.recovery_mail_sent')
-      redirect_to login_path
     else
       flash[:notice] = t('passwords.user_not_found')
-      redirect_to login_path
     end
+    redirect_to login_path
   end
 
   def edit
-    @user = User.find_by_reset_password_token!([params[:id]])
+    @user = User.find_by!([params[:id]])
   end
 
   def update
-    @user = User.find_by_reset_password_token!(params[:id])
+    @user = User.find_by!(params[:id])
     if @user.reset_password_sent_at < 2.hours.ago
       flash[:notice] = t('passwords.reset_expired')
       redirect_to new_password_path
@@ -30,9 +28,9 @@ class PasswordsController < ApplicationController
     end
   end
 
-  private 
+  private
 
-  def user_params
-    params.require(:user).permit(:password)
-  end
+    def user_params
+      params.require(:user).permit(:password)
+    end
 end
