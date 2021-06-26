@@ -5,7 +5,7 @@
   <div class="card-text">
     <p><%= t('registration_confirmation.text_click_url') %>:</p>
 
-    <p><a href=<%= confirm_email_user_url(@user.confirm_token, I18n.locale) %> class="button">
+    <p><a href=<%= confirm_email_user_url(@user.confirm_token, @user) %> class="button">
         <%= t('registration_confirmation.confirmation_button') %></a></p>
   </div>
   <div class="card-footer">

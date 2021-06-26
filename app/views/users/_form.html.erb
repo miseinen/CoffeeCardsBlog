@@ -10,42 +10,42 @@
         <%= form_with(model: @user, local: true) do |f| %>
 
         <div class="form-group row">
-          <%= f.label t('username_label'), class: "col-2 col-form-label signup-label" %>
-          <div class="col-10">
-            <%= f.text_field :username, class: "form-control signup-field",
-             placeholder: t('username_placeholder'), maxlength: get_maxlength(User, :username) %>
-          </div>
+          <%= f.label t('username_label'), class: "col-12 col-form-label signup-label" %>
+        </div>
+        <div class="form-group row">
+          <%= f.text_field :username, class: "form-control signup-field",
+          placeholder: t('username_placeholder'), maxlength: get_maxlength(User, :username) %>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('about_label'), class: "col-2 col-form-label signup-label" %>
-          <div class="col-10">
-            <%= f.text_area :about, class: "form-control signup-field", rows: "3",
-             placeholder: t('about_placeholder'), maxlength: get_maxlength(User, :about) %>
-          </div>
+          <%= f.label t('about_label'), class: "col-12 col-form-label signup-label" %>
+        </div>
+        <div class="form-group row">
+          <%= f.text_area :about, class: "form-control signup-field", rows: "3",
+            placeholder: t('about_placeholder'), maxlength: get_maxlength(User, :about) %>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('email_label'), class: "col-2 col-form-label signup-label" %>
-          <div class="col-10">
-            <%= f.email_field :email, class: "form-control signup-field",
-             placeholder: t('email_placeholder'), maxlength: get_maxlength(User, :email) %>
-          </div>
+          <%= f.label t('email_label'), class: "col-12 col-form-label signup-label" %>
+        </div>
+        <div class="form-group row ">
+          <%= f.email_field :email, class: "form-control signup-field",
+            placeholder: t('email_placeholder'), maxlength: get_maxlength(User, :email) %>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('password_label'), class: "col-2 col-form-label signup-label" %>
-          <div class="col-10">
-            <%= f.password_field :password, class: "form-control signup-field", placeholder: t('password_placeholder') %>
-          </div>
+          <%= f.label t('password_label'), class: "col-12 col-form-label signup-label" %>
+        </div>
+        <div class="form-group row">
+          <%= f.password_field :password, class: "form-control signup-field", placeholder: t('password_placeholder') %>
         </div>
 
         <div class="form-group row">
-          <%= f.label t('confirmation_label'), class: "col-2 col-form-label signup-label" %>
-          <div class="col-10">
-            <%= f.password_field :password_confirmation, class: "form-control signup-field",
-             placeholder: t('confirmation_placeholder') %>
-          </div>
+          <%= f.label t('confirmation_label'), class: "col-12 col-form-label signup-label" %>
+        </div>
+        <div class="form-group row">
+          <%= f.password_field :password_confirmation, class: "form-control signup-field",
+            placeholder: t('confirmation_placeholder') %>
         </div>
 
         <p class="text-center">
