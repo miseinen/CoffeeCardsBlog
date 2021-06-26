@@ -24,6 +24,10 @@ h1 > a:hover {
   color: rgb(124, 37, 37) !important;
 }
 
+.navbar-toggler-icon {
+  background-image: image-url('mobile-menu.png') !important;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
