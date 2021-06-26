@@ -1,12 +1,12 @@
 <div class="row justify-content-md-center">
-  <div class="col-10 mt-2">
+  <div class="container col-12 mt-2">
     <div class="card text-center shadow mb-5 bg-white rounded" , id="user-profile">
       <div class="card-header">
         <%= link_to coffeecard.title, coffeecard_path(coffeecard), class: "card-title" %>
       </div>
       <div class="card-body text-left">
         <div class="row col-8">
-          <p class="card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
+          <p class="col-sm-12 card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
           <div class="col-12  text-right font-italic">
             <p style="text-align:left;">
               by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id), id: "author-link" %>

@@ -24,6 +24,10 @@ h1 > a:hover {
   color: rgb(124, 37, 37) !important;
 }
 
+.navbar-toggler-icon {
+  background-image: image-url('mobile-menu.png') !important;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -63,8 +67,11 @@ h1 > a:hover {
 }
 
 .main-image {
+  background-repeat: repeat-y;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     image-url("main.jpg");
+  border-radius: 4px;
+  border-radius: 15px 50px;
 }
 
 /* Buttons */
@@ -108,6 +115,7 @@ body {
 
 .forgot_password_link {
   color: rgb(201, 201, 201);
+  background-color: #42352c;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -120,7 +128,6 @@ body {
 /* Cards */
 .card {
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
 }
 
@@ -180,35 +187,44 @@ body {
 
 /* Card's background images */
 #list {
+  background-repeat: repeat-y;
   background-image: image-url("list");
 }
 
 #new {
+  background-repeat: repeat-y;
   background-image: image-url("new");
 }
 
 #edit {
+  background-repeat: repeat-y;
   background-image: image-url("edit");
 }
 
 #edit_user {
+  background-repeat: repeat-y;
   background-image: image-url("edit_user");
 }
 
 #user-profile {
+  background-repeat: repeat-y;
   background-image: image-url("user_profile");
 }
 
 #user-card {
+  background-repeat: repeat-y;
   background-image: image-url("user_card");
 }
 
 #show {
+  background-repeat: repeat-y;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     image-url("show");
 }
 
 #signup {
+  background-size: cover;
+  background-repeat: repeat-y;
   background-image: image-url("signup");
 }
 
@@ -233,7 +249,7 @@ body {
 .signup-label {
   background-color: #42352c;
   opacity: 0.8;
-  color: rgb(211, 201, 201);
+  color: rgb(247, 247, 247);
   border-radius: 15px 50px;
 }
 
@@ -277,38 +293,4 @@ input[type="radio"]:checked + label {
 
 .page-link:hover {
   color: black;
-}
-
-/* Social share button */
-.social-share-button .ssb-icon {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 35px 35px;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-}
-
-.social-share-button .ssb-twitter {
-  background-image: image-url('social-icon/twitter');
-}
-
-.social-share-button .ssb-facebook {
-  background-image: image-url('social-icon/facebook');
-}
-
-.social-share-button .ssb-linkedin {
-  background-image: image-url('social-icon/linkedin');
-}
-
-.social-share-button .ssb-vkontakte {
-  background-image: image-url('social-icon/vk');
-}
-
-.social-share-button .ssb-reddit {
-  background-image: image-url('social-icon/reddit');
-}
-
-.social-share-button .ssb-telegram {
-  background-image: image-url('social-icon/telegram');
 }
