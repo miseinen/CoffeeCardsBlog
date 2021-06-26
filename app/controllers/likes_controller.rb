@@ -23,7 +23,7 @@ class LikesController < ApplicationController
     end
 
     def already_liked?
-      Like.exists?(user_id: current_user.id,
+      Like.where(user_id: current_user.id,
                    coffeecard_id: params[:coffeecard_id]).exists?
     end
 

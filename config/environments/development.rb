@@ -38,8 +38,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: '81ecf10a4a5aea',
-    password: 'b54a2dcc652e46',
+    user_name: '6b521c8979b2e0',
+    password: 'fd2d20bbf7ab2f',
     address: 'smtp.mailtrap.io',
     domain: 'smtp.mailtrap.io',
     port: '2525',
