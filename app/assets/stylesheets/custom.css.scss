@@ -127,6 +127,7 @@ body {
 
 /* Cards */
 .card {
+  border-radius: 25px !important;
   background-size: cover;
   background-position: center center;
 }
@@ -136,6 +137,7 @@ body {
 }
 
 .card-header {
+  border-radius: 25px !important;
   background-color: rgba(163, 137, 113, 0.8);
   color: white;
 }
@@ -154,12 +156,19 @@ body {
 
 .card-text {
   opacity: 0.8;
-  background-color: #42352c;
+  background-color: #141413;
   color: white;
-  border-radius: 15px 0px;
+  border-radius: 15px;
+}
+
+.card-like {
+  background-color: rgb(88, 37, 37);
+  border-radius: 15px;
+  opacity: 0.8;
 }
 
 .card-footer {
+  border-radius: 25px !important;
   background-color:rgba(66, 53, 44, .8);
   color: rgb(165, 160, 160);
   font-style: italic;
@@ -171,10 +180,13 @@ body {
 }
 
 #author-link {
-  font-size: x-large;
+  font-weight: 10%;
+  background-color:rgba(66, 53, 44, .8);
+  border-radius: 15px;
+  opacity: 0.9;
   font-family: "Lucida Sans Unicode";
-  color: rgb(204, 195, 195);
-  text-decoration: underline;
+  color: whitesmoke;
+
 }
 
 .avatar {
