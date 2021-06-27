@@ -5,22 +5,22 @@
         <%= link_to coffeecard.title, coffeecard_path(coffeecard), class: "card-title" %>
       </div>
       <div class="card-body text-left">
-        <div class="row col-8">
-          <p class="col-sm-12 card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
-          <div class="col-12  text-right font-italic">
+        <div class="row">
+          <p class=" col-lg-8 col-xs-4 card-text mb-3 pl-2 pr-2 lead"><%= coffeecard.description %></p>
+          <div class="col-8 text-right font-italic">
             <p style="text-align:left;">
               by <%= link_to coffeecard.user.username, user_path(coffeecard.user.id), id: "author-link" %>
-              <span style="float:right;">
+              <span class="card-like pr-2 pl-2", style="float:right;">
                 <%= coffeecard.likes.count %>
                 <% if logged_in? %>
                 <% pre_like = coffeecard.likes.find { |like| like.user_id == current_user.id} %>
-                <% if pre_like %>
-                <%= link_to image_tag('liked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"), 
-            coffeecard_like_path(coffeecard, pre_like),  method: :delete %>
-                <% else %>
-                <%= link_to image_tag('notliked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"), 
-            coffeecard_likes_path(coffeecard), method: :post %>
-                <% end %>
+                  <% if pre_like %>
+                  <%= link_to image_tag('liked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"),
+              coffeecard_like_path(coffeecard, pre_like),  method: :delete %>
+                  <% else %>
+                  <%= link_to image_tag('notliked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;"),
+              coffeecard_likes_path(coffeecard), method: :post %>
+                  <% end %>
                 <% else %>
                 <%= image_tag('notliked', size: '25x25', style: "filter: invert(100%); opacity: 0.8;") %>
                 <% end %>
