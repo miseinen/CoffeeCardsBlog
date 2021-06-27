@@ -30,4 +30,4 @@ Enjoy this cozy blog.
 
 ## Deployment
 **Heroku** was used for deployment. 
-Welcome to [**CoffeeCards Blog**](https://coffeecardsblog.herokuapp.com/) (**Desktop** and **Mobile** versions)
+Welcome to [**CoffeeCards Blog**](https://coffeecardsblog.herokuapp.com/) (**Desktop** and **Mobile** versions) ⚠️Please wait: Heroku slow loading✏️...
