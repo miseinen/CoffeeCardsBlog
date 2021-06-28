@@ -33,7 +33,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # CoffeeScript adapter
 gem 'coffee-rails', '~> 5.0'
 
-gem 'mimemagic', '~> 0.3.10'
+gem 'mimemagic', '~> 0.4.3'
 
 gem 'dotenv-rails', groups: %i[development test]
 
