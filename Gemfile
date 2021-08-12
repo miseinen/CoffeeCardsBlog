@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.11'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Pagination
-gem 'will_paginate', '~> 3.3.0'
+gem 'will_paginate', '~> 3.3.1'
 # Pagination with bootstrap
 gem 'bootstrap-will_paginate', '~> 1.0'
 # Internationalize and/or localize
