@@ -13,7 +13,7 @@
     "popper.js": "^1.16.1",
     "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0",
-    "webpack": "^5.46.0",
+    "webpack": "^5.64.0",
     "webpack-cli": "^4.7.2"
   },
   "version": "0.1.0",
